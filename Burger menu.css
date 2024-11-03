@@ -13,8 +13,8 @@ nav { /*selve menu-boksen*/
     height: 100px;
     align-items: center;
     width: 100%;
-    position: fixed; /* Tilføjet */
-    top: 0; /* Tilføjet */
+    position: fixed;
+    top: 0;
     z-index: 1000; /* Tilføjet for at sikre, at menuen er oven på andet indhold */
 }
 
@@ -85,6 +85,25 @@ nav { /*selve menu-boksen*/
 
 #menu-activate {
     display: none;
+}
+
+
+.footer {/*Footer*/
+	display: flex;
+	position:absolute;
+	flex-direction: row;
+    justify-content: space-between;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	background-color: #252753;
+	
+}
+
+.footer p{
+	font-size: 15px;
+	margin-left: 20px;
+	text-align: left;
 }
 
 @media screen and (max-width: 700px) { /*Når menuen kommer under 700px*/

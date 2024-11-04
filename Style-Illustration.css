@@ -1,5 +1,30 @@
 @charset "utf-8";
 /* CSS Document */
 
+h1 {
+	Padding-left: 50px;
+	Font-weight: bold;
+	font-size: 50px
+}
 
+hr {
+	margin-left:45px;
+	margin-right: 4.5%;
+	height:2px;
+	border-width:0;
+	color:gray;
+	background-color:gray;
+}
 
+.Gallery{
+	Padding-left: 15px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 15px;
+}
+
+.Gallery img{
+	width: 200px;
+	height: 200px;
+}

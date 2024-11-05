@@ -29,6 +29,7 @@ nav { /*selve menu-boksen*/
 	font-size: 26px;
     padding: 15px;
 	text-decoration: none;
+	cursor: pointer; /* Add a mouse pointer on hover */
 }
 
 .menu-box {

@@ -2,13 +2,13 @@
 /* CSS Document */
 
 h1 {
-	Padding-left: 50px;
+	Padding-left: 5%;
 	Font-weight: bold;
 	font-size: 50px
 }
 
-hr {
-	margin-left:45px;
+hr { /*Under linge deler*/
+	margin-left: 3.5%;
 	margin-right: 4.5%;
 	height:2px;
 	border-width:0;
@@ -16,15 +16,48 @@ hr {
 	background-color:gray;
 }
 
+/* ---- billede gallery ---- */
 .Gallery{
-	Padding-left: 15px;
+	margin-left: 3.5%;
+	margin-right: 4.5%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 15px;
+	gap: 15px 15px;
+    grid-template-columns: repeat(6, auto);
+	grid-auto-rows: 1fr;
+	justify-items: center;
 }
 
 .Gallery img{
-	width: 200px;
-	height: 200px;
+	width: 190px;
+	height: 190px;
+	object-fit: cover;
+	align-items: center;
+}
+
+.Poster_galleri{
+	Padding-left: 5%;
+	display: inline-grid;
+	grid-template-columns: auto;
+	grid-template-rows: 50px;
+	gap: 5px 10px;
+	
+}
+
+.Poster_galleri p {
+	background-color: aqua;
+	padding: 20px;
+	border: 1px solid red;
+}
+
+.Poster_galleri img{
+	width: 190px;
+	height: auto;
+	object-fit: cover;
+	align-items: center;
+}
+
+.item1{
+	/*grid-column: 1/ span 2;
+	grid-row: 1/ span 2*/
+	grid-area: 1/span 2/1/span 2;
 }

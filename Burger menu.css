@@ -1,4 +1,3 @@
-@charset "utf-8";
 /* CSS Document */
 
 * {
@@ -91,20 +90,22 @@ nav { /*selve menu-boksen*/
 
 .footer {/*Footer*/
 	display: flex;
-	position:absolute;
+	position: relative;
 	flex-direction: row;
     justify-content: space-between;
+	align-items: center;
 	bottom: 0;
 	height: 60px;
 	width: 100%;
 	background-color: #252753;
-	
 }
 
-.footer p{
-	font-size: 15px;
+.footer pfooter{
+	font-size: 20px;
 	margin-left: 20px;
 	text-align: left;
+	color: #E7C305;
+	padding: 15px;
 }
 
 @media screen and (max-width: 700px) { /*Når menuen kommer under 700px*/
@@ -138,4 +139,8 @@ nav { /*selve menu-boksen*/
         transition: height 1s;
 		display: block;
     }
+	
+	.footer {/*Footer*/
+	display:none;
+	}
 }

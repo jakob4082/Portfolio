@@ -17,47 +17,60 @@ hr { /*Under linge deler*/
 }
 
 /* ---- billede gallery ---- */
-.Gallery{
-	margin-left: 3.5%;
-	margin-right: 4.5%;
+.Gallery {
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
-	gap: 15px 15px;
-    grid-template-columns: repeat(6, auto);
-	grid-auto-rows: 1fr;
-	justify-items: center;
+    grid-template-columns: repeat(6, 1fr); /* 6 kolonner med samme bredde */
+    gap: 15px; /* Mellemrum mellem billederne */
+    justify-items: center;
 }
 
-.Gallery img{
-	width: 190px;
-	height: 190px;
-	object-fit: cover;
-	align-items: center;
+.Gallery img {
+    width: 100%; /* Fyld hele grid-cellen */
+    height: 190px; /* Ens højde for alle billeder */
+    object-fit: cover; /* Beskærer billederne til at passe i boksen */
 }
 
-.Poster_galleri{
-	Padding-left: 5%;
-	display: inline-grid;
-	grid-template-columns: auto;
-	grid-template-rows: 50px;
-	gap: 5px 10px;
-	
+/* Ydre container med 3 kolonner */
+.grid-container {
+	margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    gap: 10px; /* Afstand mellem Poster_galleri */
 }
 
+/* Hver Poster_galleri holder sin indre grid-struktur */
+.Poster_galleri {
+    display: grid;
+    grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
+    gap: 10px; /* Afstand mellem billedet og teksten */
+    padding: 10px;
+    background-color:rgba(255,255,255,0.50); /* Valgfri baggrundsfarve */
+    border: 1px solid #ddd;
+}
+
+/* Titel over billedet og teksten */
+.Poster_galleri .item1 {
+    grid-column: 1 / -1; /* Titel strækker sig over begge kolonner */
+    font-weight: bold;
+    padding-bottom: 0px;
+    font-size: 18px;
+}
+
+/* Styling til billedet */
+.Poster_galleri .Poster img {
+    width: 100%; /* Billedet fylder sin kolonne */
+    max-width: 200px; /* Begrænser bredden af billedet */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styling til beskrivelsen */
 .Poster_galleri p {
-	background-color: aqua;
-	padding: 20px;
-	border: 1px solid red;
-}
-
-.Poster_galleri img{
-	width: 190px;
-	height: auto;
-	object-fit: cover;
-	align-items: center;
-}
-
-.item1{
-	/*grid-column: 1/ span 2;
-	grid-row: 1/ span 2*/
-	grid-area: 1/span 2/1/span 2;
+    margin: 0;
+    padding: 0px;
+    font-size: 13px;
+    color: #333;
 }

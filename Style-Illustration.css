@@ -32,7 +32,7 @@ hr { /*Under linge deler*/
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
 }
 
-/* Ydre container med 3 kolonner */
+/* plakat gallery */
 .grid-container {
 	margin-left: 5%;
     margin-right: 5%;
@@ -73,4 +73,65 @@ hr { /*Under linge deler*/
     padding: 0px;
     font-size: 13px;
     color: #333;
+}
+
+@media screen and (max-width: 700px){
+	.Gallery{
+		margin-left: 5%;
+		margin-right: 5%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* 6 kolonner med samme bredde */
+		gap: 15px; /* Mellemrum mellem billederne */
+		justify-items: center;
+	}
+	
+	.Gallery img{
+	width: 100%; /* Fyld hele grid-cellen */
+    height: 180px; /* Ens højde for alle billeder */
+    object-fit: cover; /* Beskærer billederne til at passe i boksen */
+	}
+	
+	/* plakat gallery */
+.grid-container {
+	margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    gap: 10px; /* Afstand mellem Poster_galleri */
+}
+
+/* Hver Poster_galleri holder sin indre grid-struktur */
+.Poster_galleri {
+    display: grid;
+    grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
+    gap: 10px; /* Afstand mellem billedet og teksten */
+    padding: 10px;
+    background-color:rgba(255,255,255,0.50); /* Valgfri baggrundsfarve */
+    border: 1px solid #ddd;
+}
+
+/* Titel*/
+.Poster_galleri .item1 {
+    grid-column: 1 / -1; /* Titel strækker sig over begge kolonner */
+    font-weight: bold;
+    padding-bottom: 0px;
+    font-size: 14px;
+}
+
+/* Styling til billedet */
+.Poster_galleri .Poster img {
+    width: 100%; /* Billedet fylder sin kolonne */
+    max-width: 108px; /* Begrænser bredden af billedet */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Styling til beskrivelsen */
+.Poster_galleri p {
+    margin: 0;
+    padding: 0px;
+    font-size: 7px;
+    color: #333;
+}
+	
 }

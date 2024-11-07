@@ -4,7 +4,9 @@
 h1 {
 	Padding-left: 5%;
 	Font-weight: bold;
-	font-size: 50px
+	font-size: 40px;
+	font-family: guyot-sans, sans-serif;
+	font-style: normal;
 }
 
 hr { /*Under linge deler*/
@@ -30,6 +32,8 @@ hr { /*Under linge deler*/
     width: 100%; /* Fyld hele grid-cellen */
     height: 190px; /* Ens højde for alle billeder */
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
+	cursor:pointer;
+	onclick=onClick(this);
 }
 
 /* plakat gallery */

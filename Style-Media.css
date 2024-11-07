@@ -8,7 +8,9 @@ b {
 h1 {
 	Padding-left: 5%;
 	Font-weight: bold;
-	font-size: 50px
+	font-size: 40px;
+	font-family: guyot-sans, sans-serif;
+	font-style: normal;
 }
 
 hr { /*Under linge deler*/
@@ -42,6 +44,10 @@ hr { /*Under linge deler*/
     display: flex;
     flex-direction: column;
     padding: 10px;
+	font-family: mansalva, sans-serif;
+	font-size: 16px; 
+	font-weight: 400;
+	font-style: normal;
 }
 
 .half-height iframe {

@@ -21,6 +21,7 @@ p {/*Under-Overskrift*/
     color: #E7C305;
 	text-align: center; 
     justify-content: center;
-	font-size: 26px;
+	font-family: swing-king, sans-serif;
+	font-size: 20px;
 	z-index: 500;
 }

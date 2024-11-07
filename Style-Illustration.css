@@ -51,7 +51,7 @@ hr { /*Under linge deler*/
     border: 1px solid #ddd;
 }
 
-/* Titel over billedet og teksten */
+/* Titel*/
 .Poster_galleri .item1 {
     grid-column: 1 / -1; /* Titel strækker sig over begge kolonner */
     font-weight: bold;

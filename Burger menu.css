@@ -101,10 +101,11 @@ nav { /*selve menu-boksen*/
 	height: 60px;
 	width: 100%;
 	background-color: #252753;
+	bottom: 0;
 }
 
 .footer pfooter{
-	font-size: 20px;
+	font-size: 15px;
 	margin-left: 20px;
 	text-align: left;
 	color: #E7C305;

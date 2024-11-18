@@ -11,11 +11,11 @@ nav { /*selve menu-boksen*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 100px;
+    block-size: 100px;
     align-items: center;
-    width: 100%;
+    inline-size: 100%;
     position: fixed;
-    top: 0;
+    inset-block-start: 0;
     z-index: 1000; /* Tilføjet for at sikre, at menuen er oven på andet indhold */
 }
 
@@ -41,15 +41,15 @@ nav { /*selve menu-boksen*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 100%;
+    inline-size: 60px;
+    block-size: 100%;
 }
 
 .menu-icon {/*Burger Menu ikon udsene*/
     display: block;
     background-color: #E7C305;
-    height: 4px;
-    width: 30px;
+    block-size: 4px;
+    inline-size: 30px;
     position: relative; /* Tilføjet position: relative */
     border-radius: 2px;
     transition: all 0.3s ease; /* Opdateret transition */
@@ -59,28 +59,28 @@ nav { /*selve menu-boksen*/
     content: "";
     display: block;
     background-color: #E7C305;
-    height: 4px;
-    width: 30px;
+    block-size: 4px;
+    inline-size: 30px;
     position: absolute;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
 .menu-icon::before { /*Burger Menu ikon top plasering*/
-    margin-top: -8px;
+    margin-block-start: -8px;
 }
 
 .menu-icon::after { /*Burger Menu ikon udsene bund*/
-    margin-top: 8px;
+    margin-block-start: 8px;
 }
 
 #menu-activate:checked + .menu-box .menu-icon::before {
-    margin-top: 0;
+    margin-block-start: 0;
     transform: rotate(45deg);
 }
 
 #menu-activate:checked + .menu-box .menu-icon::after {
-    margin-top: 0;
+    margin-block-start: 0;
     transform: rotate(-45deg);
 }
 
@@ -99,17 +99,17 @@ nav { /*selve menu-boksen*/
 	flex-direction: row;
     justify-content: space-between;
 	align-items: center;
-	bottom: 0;
-	height: 60px;
-	width: 100%;
+	inset-block-end: 0;
+	block-size: 60px;
+	inline-size: 100%;
 	background-color: #252753;
-	bottom: 0;
+	inset-block-end: 0;
 }
 
 .footer pfooter{
 	font-size: 15px;
-	margin-left: 20px;
-	text-align: left;
+	margin-inline-start: 20px;
+	text-align: start;
 	color: #E7C305;
 	padding: 15px;
 }
@@ -121,18 +121,18 @@ nav { /*selve menu-boksen*/
 
     .menu {
         position: absolute;
-        top: 0;
-        right: 0;
-        margin-top: 100px;
+        inset-block-start: 0;
+        inset-inline-end: 0;
+        margin-block-start: 100px;
         background-color:rgba(37,39,83,0.84);
         flex-direction: column;
-        width: 30%;
+        inline-size: 30%;
         justify-content: center;
         align-items: center;
     }
 
     #menu-activate ~ .menu li {
-        height: 0;
+        block-size: 0;
         margin: 0;
         padding: 0;
         transition: height 1s;
@@ -140,7 +140,7 @@ nav { /*selve menu-boksen*/
     }
 
     #menu-activate:checked ~ .menu li {
-        height: 50px;
+        block-size: 50px;
         padding: 10px;
         transition: height 1s;
 		display: block;

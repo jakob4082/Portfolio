@@ -2,7 +2,7 @@
 /* CSS Document */
 
 h1 {
-	Padding-left: 5%;
+	padding-inline-start: 5%;
 	Font-weight: bold;
 	font-size: 40px;
 	font-family: guyot-sans, sans-serif;
@@ -10,8 +10,8 @@ h1 {
 }
 
 hr { /*Under linge deler*/
-	margin-left: 3.5%;
-	margin-right: 4.5%;
+	margin-inline-start: 3.5%;
+	margin-inline-end: 4.5%;
 	height:2px;
 	border-width:0;
 	color:gray;

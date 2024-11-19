@@ -23,17 +23,32 @@ nav { /*selve menu-boksen*/
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    margin-inline-end: 2.5%;
+    
 }
 
-.menu li, a {/*Listens farve og mellem rum*/
-    color: #E7C305;
-	font-family: guyot-sans, sans-serif;
-	font-weight: 900;
-	font-style: italic;
-	font-size: 26px;
-    padding: 15px;
-	text-decoration: none;
-	cursor: pointer; /* Add a mouse pointer on hover */
+.menu li, a {
+    color: #252753;
+    font-family: guyot-sans, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 25px;
+
+    text-align: center; /* Centrer teksten inde i knappen */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #E7C305;
+
+    padding: 14px; /* Giver lidt ekstra plads til tekst */
+    margin: 5% 5px;
+    border-radius: 30px;
+
+    /* Tilføj disse linjer for ens størrelse */
+    display: inline-flex; /* Gør knapper fleksible */
+    justify-content: center; /* Centrer teksten horisontalt */
+    align-items: center; /* Centrer teksten vertikalt */
+    inline-size: 155px; /* Fast bredde */
+    block-size: 15px; /* Fast højde */
 }
 
 .menu-box {

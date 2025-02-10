@@ -4,9 +4,8 @@
     margin: 0;
 }
 
-
-
-nav { /*selve menu-boksen*/
+/*---------------------------menu------------------------*/
+nav {
     background-color: #252753;
     display: flex;
     flex-direction: row;
@@ -24,7 +23,6 @@ nav { /*selve menu-boksen*/
     flex-direction: row;
     list-style-type: none;
     margin-inline-end: 2.5%;
-    
 }
 
 .menu li, a {
@@ -106,8 +104,40 @@ nav { /*selve menu-boksen*/
 #menu-activate {
     display: none;
 }
+/*---------------------------Under menu------------------------*/
+.subnav {
+    position: fixed; /* Ensure subnav has a position property */
+    z-index: 999; /* Lower z-index to be under nav */
+    background-color: #E7C305; /* Change background color */
+    display: flex; /* Make subnav a flex container */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    inline-size: 100%; /* Full width */
+    inset-block-start: 14%; /* Adjust this value to position it below the nav */
+}
 
+.under_menu {
+    display: flex; /* Make under_menu a flex container */
+    flex-direction: row; /* Align items horizontally */
+    list-style-type: none; /* Remove list bullets */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    inline-size: 100%; /* Full width */
+}
 
+.under_menu li, .under_menu a {
+    color: #252753; /* Text color */
+    font-family: guyot-sans, sans-serif; /* Font family */
+    font-style: italic; /* Italic text */
+    font-size: 15px; /* Text size */
+    cursor: pointer; /* Pointer cursor */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add some margin between items */
+}
+
+/*---------------------------Footer---------------------------*/
 .footer {/*Footer*/
 	display: flex;
 	position: relative;

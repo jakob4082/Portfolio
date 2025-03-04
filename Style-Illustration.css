@@ -78,7 +78,7 @@ hr { /*Under linge deler*/
 }
 
 /* ---------ændringer når skærmen er under 700px--------- */
-@media screen and (max-width: 700px){
+@media (max-width: 480px){
 	.Gallery{
 		margin-inline-start: 5%;
 		margin-inline-end: 5%;

@@ -42,16 +42,26 @@
 	<hr>
 	<br>
 <div class="Gallery"> <!-- billede galleri, uploader mine tegninger -->
-		<img src="img/Bird witch.jpg" alt="Fugle heksen">
-		<img src="img/Djep heigth edit.jpg" alt="lofi axolotl">
-		<img src="img/Bird witch.jpg" alt="Fugle heksen">
-		<img src="img/Bird witch.jpg" alt="Fugle heksen">
-		<img src="img/Bird witch.jpg" alt="Fugle heksen">
-		<img src="img/Bird witch.jpg" alt="Fugle heksen">
-		<img src="img/Bird witch.jpg" alt="Fugle heksen">
-
+		<img class="modal-trigger" src="img/Bird witch.jpg" alt="Fugle heksen">
+		<img class="modal-trigger"src="img/Djep heigth edit.jpg" alt="lofi axolotl">
+		<img class="modal-trigger"src="img/Bird witch.jpg" alt="Fugle heksen">
+		<img class="modal-trigger"src="img/Bird witch.jpg" alt="Fugle heksen">
+		<img class="modal-trigger"src="img/Bird witch.jpg" alt="Fugle heksen">
+		<img class="modal-trigger"src="img/Bird witch.jpg" alt="Fugle heksen">
+		<img class="modal-trigger"src="img/Bird witch.jpg" alt="Fugle heksen">
 </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+	<!-- The Close Button -->
+	<span class="close">&times;</span>
+	<!-- Modal Content (The Image) -->
+	<img class="modal-content" id="img01">
+	<!-- Modal Caption (Image Text) -->
+	<div id="caption"></div>
+  </div>
+
 	<br>
+	<!-- ----Plakta---- -->
 	<h1 id="poster">Posters</h1>
 	<hr>
 	<br>
@@ -79,5 +89,30 @@
   		<pfooter>Copyright © All rights reserved. <br> jakob4082@gmail.com</pfooter>
 	</div>
 	
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		
+		// Get all images with class "modal-trigger" and add click event
+		var images = document.querySelectorAll(".modal-trigger");
+		images.forEach(function(img) {
+		  img.onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		  };
+		});
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		};
+		</script>
+
 </body>
 </html>

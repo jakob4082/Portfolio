@@ -35,6 +35,78 @@ hr { /*Under linge deler*/
 
 }
 
+/* Style the Images Used to Trigger the Modal */
+.modal-trigger {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .modal-trigger:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    padding-block-start: 100px;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    inline-size: 80%;
+    max-inline-size: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) */
+  #caption {
+    margin: auto;
+    display: block;
+    inline-size: 80%;
+    max-inline-size: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    block-size: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    inset-block-start: 15px;
+    inset-inline-end: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }  
+
 /* ---------plakat gallery--------- */
 .grid-container {
 	margin-inline-start: 5%;
@@ -94,6 +166,10 @@ hr { /*Under linge deler*/
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
 	}
 	
+    .modal-content {
+        inline-size: 100%;
+      }
+
 	/* plakat gallery */
 .grid-container {
 	margin-inline-start: 5%;

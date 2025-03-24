@@ -26,7 +26,7 @@ nav {
 }
 
 .menu li, a {
-    color: #252753;
+    color: #E7C305;
     font-family: guyot-sans, sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -35,9 +35,7 @@ nav {
     text-align: center; /* Centrer teksten inde i knappen */
     text-decoration: none;
     cursor: pointer;
-    background-color: #E7C305;
 
-    padding: 14px; /* Giver lidt ekstra plads til tekst */
     margin: 5% 5px;
     border-radius: 30px;
 
@@ -115,6 +113,8 @@ nav {
     align-items: center; /* Center items vertically */
     inline-size: 100%; /* Full width */
     inset-block-start: 14%; /* Adjust this value to position it below the nav */
+    padding: 14px; /* Giver lidt ekstra plads til tekst */
+    font-size: 15px
 }
 
 .under_menu {

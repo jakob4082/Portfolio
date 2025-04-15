@@ -5,6 +5,10 @@
 }
 
 /*---------------------------menu------------------------*/
+header {
+    block-size: 550px;
+}
+
 nav {
     background-color: #252753;
     display: flex;
@@ -15,7 +19,7 @@ nav {
     inline-size: 100%;
     position: fixed;
     inset-block-start: 0;
-    z-index: 1000; /* Tilføjet for at sikre, at menuen er oven på andet indhold */
+
 }
 
 .menu { /*Gør teksten til en række*/
@@ -105,7 +109,6 @@ nav {
 /*---------------------------Under menu------------------------*/
 .subnav {
     position: fixed; /* Ensure subnav has a position property */
-    z-index: 999; /* Lower z-index to be under nav */
     background-color: #E7C305; /* Change background color */
     display: flex; /* Make subnav a flex container */
     flex-direction: row; /* Align items horizontally */

@@ -32,7 +32,7 @@ hr { /*Under linge deler*/
     inline-size: 100%; /* Fyld hele grid-cellen */
     block-size: 190px; /* Ens højde for alle billeder */
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
-
+    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
 }
 
 /* Style the Images Used to Trigger the Modal */
@@ -122,7 +122,7 @@ hr { /*Under linge deler*/
     grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
     gap: 10px; /* Afstand mellem billedet og teksten */
     padding: 10px;
-    background-color:rgba(255,255,255,0.50); /* Valgfri baggrundsfarve */
+    background-color:rgba(194, 185, 185, 0.5); /* Valgfri baggrundsfarve */
     border: solid #ddd;
 }
 

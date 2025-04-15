@@ -2,11 +2,11 @@
 /* CSS Document */
 
 b {
-	margin-left: 5%;
+	margin-inline-start: 5%;
 } 
 
 h1 {
-	Padding-left: 5%;
+	padding-inline-start: 5%;
 	Font-weight: bold;
 	font-size: 40px;
 	font-family: guyot-sans, sans-serif;
@@ -14,30 +14,36 @@ h1 {
 }
 
 hr { /*Under linge deler*/
-	margin-left: 3.5%;
-	margin-right: 4.5%;
-	height:2px;
+	margin-inline-start: 3.5%;
+	margin-inline-end: 4.5%;
+	block-size:2px;
 	border-width:0;
 	color:gray;
 	background-color:gray;
 }
 
-.grid {
-	margin-left: 5%;
-	margin-right: 5%;
+.grid-animation img {
+	box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+}
+
+.grid-sound {
+	margin-inline-start: 5%;
+	margin-inline-end: 5%;
     display: grid;
     grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
     gap: 5px; /* Afstand mellem billedet og teksten */
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.50); /* Valgfri baggrundsfarve */
+    background-color: rgba(93, 187, 93, 0.5); /* Valgfri baggrundsfarve */
     border: 1px solid #ddd;
     align-items: stretch; /* Sørger for, at rækker strækkes til samme højde */
+	border-radius: 25px;
 }
 
-.grid .item1 img {
-    width: 200px;
-    height: 100%;
+.grid-sound .item1 img {
+    inline-size: 200px;
+    block-size: 100%;
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
+	border-radius: 15px;
 }
 
 .half-height {
@@ -51,7 +57,7 @@ hr { /*Under linge deler*/
 }
 
 .half-height iframe {
-    width: 100%;
-    height: 100px; /* Gør, at iframe fylder hele pladsen */
-    max-height: 200px; /* Maksimal højde for at matche billedets højde */
+    inline-size: 100%;
+    block-size: 100px; /* Gør, at iframe fylder hele pladsen */
+    max-block-size: 200px; /* Maksimal højde for at matche billedets højde */
 }

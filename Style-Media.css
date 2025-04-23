@@ -1,63 +1,96 @@
 @charset "utf-8";
 /* CSS Document */
 
-b {
-	margin-inline-start: 5%;
+b, b1,.grid-container {
+margin-inline-start: 5%;
+margin-inline-end: 5%;
 } 
 
 h1 {
-	padding-inline-start: 5%;
-	Font-weight: bold;
-	font-size: 40px;
-	font-family: guyot-sans, sans-serif;
-	font-style: normal;
+padding-inline-start: 5%;
+Font-weight: bold;
+font-size: 40px;
+font-family: guyot-sans, sans-serif;
+font-style: normal;
 }
 
 hr { /*Under linge deler*/
-	margin-inline-start: 3.5%;
-	margin-inline-end: 4.5%;
-	block-size:2px;
-	border-width:0;
-	color:gray;
-	background-color:gray;
+margin-inline-start: 3.5%;
+margin-inline-end: 4.5%;
+block-size:2px;
+border-width:0;
+color:gray;
+background-color:gray;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columns */
+gap: 5%;
+padding: 10px;
+}
+
+.grid-video {
+background-color: rgba(255, 0, 0, 0.5);
+padding: 10px;
+border-radius: 5px;
+max-inline-size: 460px; /* Limit width */
+inline-size: 100%; /* Fill available space within max-width */
+
+box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+}
+
+.grid-video iframe {
+inline-size: 460px;
+block-size: 315px;
+max-block-size: 215px;
+border-radius: 5px;
+}
+
+.grid-video p {
+font-size: 15px;
 }
 
 .grid-animation img {
-	box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+/* Skyggeeffekt */
+inline-size: 30%;
+block-size: auto;
+object-fit: cover; /* Beskærer billederne til at passe i boksen */
 }
 
 .grid-sound {
-	margin-inline-start: 5%;
-	margin-inline-end: 5%;
-    display: grid;
-    grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
-    gap: 5px; /* Afstand mellem billedet og teksten */
-    padding: 10px;
-    background-color: rgba(93, 187, 93, 0.5); /* Valgfri baggrundsfarve */
-    border: 1px solid #ddd;
-    align-items: stretch; /* Sørger for, at rækker strækkes til samme højde */
-	border-radius: 25px;
+margin-inline-start: 5%;
+margin-inline-end: 5%;
+display: grid;
+grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
+gap: 5px; /* Afstand mellem billedet og teksten */
+padding: 10px;
+background-color: rgba(93, 187, 93, 0.5); /* Valgfri baggrundsfarve */
+border: 1px solid #ddd;
+align-items: stretch; /* Sørger for, at rækker strækkes til samme højde */
+border-radius: 25px;
 }
 
 .grid-sound .item1 img {
-    inline-size: 200px;
-    block-size: 100%;
-    object-fit: cover; /* Beskærer billederne til at passe i boksen */
-	border-radius: 15px;
+inline-size: 200px;
+block-size: 100%;
+object-fit: cover; /* Beskærer billederne til at passe i boksen */
+border-radius: 15px;
 }
 
 .half-height {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-	font-family: mansalva, sans-serif;
-	font-size: 16px; 
-	font-weight: 400;
-	font-style: normal;
+display: flex;
+flex-direction: column;
+padding: 10px;
+font-family: mansalva, sans-serif;
+font-size: 16px; 
+font-weight: 400;
+font-style: normal;
 }
 
 .half-height iframe {
-    inline-size: 100%;
-    block-size: 100px; /* Gør, at iframe fylder hele pladsen */
-    max-block-size: 200px; /* Maksimal højde for at matche billedets højde */
+inline-size: 100%;
+block-size: 100px; /* Gør, at iframe fylder hele pladsen */
+max-block-size: 200px; /* Maksimal højde for at matche billedets højde */
 }

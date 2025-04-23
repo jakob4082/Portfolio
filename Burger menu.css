@@ -194,7 +194,7 @@ nav {
 		display: block;
     }
 	
-	.footer {/*Footer*/
+	.footer,.subnav {/*Footer*/
 	display:none;
 	}
 }

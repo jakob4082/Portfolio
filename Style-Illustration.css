@@ -32,7 +32,7 @@ hr { /*Under linge deler*/
     inline-size: 100%; /* Fyld hele grid-cellen */
     block-size: 190px; /* Ens højde for alle billeder */
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
-    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5); /* Skyggeeffekt */
 }
 
 /* Style the Images Used to Trigger the Modal */
@@ -124,6 +124,7 @@ hr { /*Under linge deler*/
     padding: 10px;
     background-color:rgba(194, 185, 185, 0.5); /* Valgfri baggrundsfarve */
     border: solid #ddd;
+    border-radius: 5px; /* Rundede hjørner */
 }
 
 /* Titel*/

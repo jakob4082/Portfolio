@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+padding-inline-start: 5%;
+Font-weight: bold;
+font-size: 40px;
+font-family: guyot-sans, sans-serif;
+font-style: normal;
+}
+
+hr { /*Under linge deler*/
+margin-inline-start: 3.5%;
+margin-inline-end: 4.5%;
+block-size:2px;
+border-width:0;
+color:gray;
+background-color:gray;
+}

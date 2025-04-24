@@ -9,7 +9,7 @@ header {
     block-size: 550px;
 }
 
-nav {
+nav { /*Menu*/
     background-color: #252753;
     display: flex;
     flex-direction: row;
@@ -117,7 +117,6 @@ nav {
     inline-size: 100%; /* Full width */
     inset-block-start: 14%; /* Adjust this value to position it below the nav */
     padding: 14px; /* Giver lidt ekstra plads til tekst */
-    font-size: 15px
 }
 
 .under_menu {

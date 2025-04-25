@@ -17,3 +17,8 @@ border-width:0;
 color:gray;
 background-color:gray;
 }
+
+.Costainer img {
+    inline-size: 20%;
+    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5); /* Skyggeeffekt */
+}

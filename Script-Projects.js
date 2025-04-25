@@ -1,23 +1,24 @@
+// Script-Projects.js
 function imgchange(){
     var image = document.getElementById("img");
     
-    if (image.src.match("Mimg/Mando_coplay (1).jpg")){
-        image.src = "img/Mando_coplay (2).jpg";
-    } else if (image.src.match("img/Mando_coplay (2).jpg")) {
-        image.src = "img/Mando_coplay (3).jpg";
+    if (image.src.match("img/Mandocoplay1.jpg")){
+        image.src = "img/Mandocoplay2.jpg";
+    } else if (image.src.match("img/Mandocoplay2.jpg")) {
+        image.src = "img/Mandocoplay3.jpg";
     } else {
-        image.src = "img/Mando_coplay (1).jpg";
+        image.src = "img/Mandocoplay1.jpg";
     }
 }
 
 function imgchangeback(){
     var image = document.getElementById("img");
     
-    if (image.src.match("img3.png")){
-        image.src = "img2.png";
-    } else if (image.src.match("img2.png")) {
-        image.src = "img1.png";
+    if (image.src.match("img/Mandocoplay3.jpg")){
+        image.src = "img/Mandocoplay2.jpg";
+    } else if (image.src.match("iimg/Mandocoplay2.jpg")) {
+        image.src = "img/Mandocoplay1.jpg";
     } else {
-        image.src = "img3.png";
+        image.src = "img/Mandocoplay3.jpg";
     }
 }

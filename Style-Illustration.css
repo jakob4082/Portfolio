@@ -113,7 +113,7 @@ hr { /*Under linge deler*/
     margin-inline-end: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
-    gap: 10px; /* Afstand mellem Poster_galleri */
+    gap: 15px; /* Afstand mellem Poster_galleri */
 }
 
 /* Hver Poster_galleri holder sin indre grid-struktur */
@@ -122,9 +122,8 @@ hr { /*Under linge deler*/
     grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
     gap: 10px; /* Afstand mellem billedet og teksten */
     padding: 10px;
-    background-color:rgba(194, 185, 185, 0.5); /* Valgfri baggrundsfarve */
-    border: solid #ddd;
-    border-radius: 5px; /* Rundede hjørner */
+    background-color:rgba(0, 0, 0, 0.022); /* Valgfri baggrundsfarve */
+
 }
 
 /* Titel*/

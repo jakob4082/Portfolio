@@ -140,7 +140,7 @@ nav { /*Menu*/
 }
 
 /*---------------------------Footer---------------------------*/
-.footer {/*Footer*/
+footer {/*Footer*/
 	display: flex;
 	position: relative;
 	flex-direction: row;
@@ -153,7 +153,7 @@ nav { /*Menu*/
 	inset-block-end: 0;
 }
 
-.footer pfooter{
+footer pfooter{
 	font-size: 15px;
 	margin-inline-start: 20px;
 	text-align: start;
@@ -193,7 +193,7 @@ nav { /*Menu*/
 		display: block;
     }
 	
-	.footer,.subnav {/*Footer*/
+	footer,.subnav {/*Footer*/
 	display:none;
 	}
 }

@@ -18,13 +18,56 @@ color:gray;
 background-color:gray;
 }
 
-.Costainer img {
-    inline-size: 20%;
-    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5); /* Skyggeeffekt */
+.Costainer{
+	margin-inline-start: 5%;
+    margin-inline-end: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    gap: 10px; /* Afstand mellem Poster_galleri */
 }
 
-#knap {
+.Gallery {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: image and text */
+    gap: 10px; /* Space between the image and text */
+    padding: 10px;
+    background-color: rgba(194, 185, 185, 0.5); /* Optional background color */
+    border: solid #ddd;
+    border-radius: 5px; /* Rounded corners */
+    grid-template-rows: auto auto; /* Add rows for content */
+}
+
+.Gallery img {
+    grid-column: 1 / -1; /* Make the image span both columns */
+    inline-size: 100%;
+    block-size: auto;
+    border: 1px solid #00000029; /* Optional border around the image */
+}
+
+#knap, #knap2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content inside the button */
     padding: 10px;
     background-color: rgb(96, 96, 96);
-    color:white;
+    color: white;
+    inline-size: fit-content; /* Ensure it only takes up as much space as its content */
+    justify-self: center; /* Center horizontally in the grid */
+    align-self: start; /* Align vertically under the image */
+    margin: 10px; /* Add spacing between buttons */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add spacing between the buttons */
+    grid-column: 1 / -1; /* Span the entire width of the grid */
+    grid-row: 2; /* Place it in the second row */
+}
+
+#knap, #knap2 {
+    padding: 10px;
+    background-color: rgb(96, 96, 96);
+    color: white;
+    inline-size: fit-content;
 }

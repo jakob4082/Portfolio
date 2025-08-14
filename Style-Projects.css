@@ -2,72 +2,106 @@
 /* CSS Document */
 
 h1 {
-padding-inline-start: 5%;
-Font-weight: bold;
-font-size: 40px;
-font-family: guyot-sans, sans-serif;
-font-style: normal;
+    padding-inline-start: 5%;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: guyot-sans, sans-serif;
+    font-style: normal;
 }
 
-hr { /*Under linge deler*/
-margin-inline-start: 3.5%;
-margin-inline-end: 4.5%;
-block-size:2px;
-border-width:0;
-color:gray;
-background-color:gray;
+hr { /* Underline divider */
+    margin-inline-start: 3.5%;
+    margin-inline-end: 4.5%;
+    block-size: 2px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
 }
 
-.Costainer{
-	margin-inline-start: 5%;
-    margin-inline-end: 5%;
+.Costainer {
+    margin-inline: auto;
+    max-inline-size: 600px;
+    inline-size: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
-    gap: 10px; /* Afstand mellem Poster_galleri */
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    padding: 8px;
+    background-color: rgba(93, 187, 93, 0.5);
+    border: 1px solid #ddd;
+    border-radius: 16px;
+}
+
+.Costainer img {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+    max-block-size: 500px;
+    border: 1px solid #00000029;
+    border-radius: 15px;
 }
 
 .Gallery {
     display: grid;
-    grid-template-columns: auto 1fr; /* Two columns: image and text */
-    gap: 10px; /* Space between the image and text */
+    grid-template-columns: 1fr;
+    gap: 10px;
     padding: 10px;
-    background-color: rgba(194, 185, 185, 0.5); /* Optional background color */
+    background-color: rgba(194, 185, 185, 0.5);
     border: solid #ddd;
-    border-radius: 5px; /* Rounded corners */
-    grid-template-rows: auto auto; /* Add rows for content */
+    border-radius: 5px;
 }
 
 .Gallery img {
-    grid-column: 1 / -1; /* Make the image span both columns */
-    inline-size: 100%;
+    display: block;
+    margin: 0 auto;
+    max-inline-size: 100%;
     block-size: auto;
-    border: 1px solid #00000029; /* Optional border around the image */
+    border: 1px solid #00000029;
+    border-radius: 5px;
+}
+
+.half-height {
+    display: flex;
+    flex-direction: column;
+    font-family: mansalva, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    max-inline-size: 80%;
+    padding: 0;
+}
+
+.half-height img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+.half-height button {
+    font-size: 17px;
+    padding: 9px 16px;
+    margin: 7px 4px;
+}
+
+.half-height p {
+    margin-block-start: 2%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    grid-column: 1 / -1;
+    grid-row: 2;
 }
 
 #knap, #knap2 {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center content inside the button */
-    padding: 10px;
-    background-color: rgb(96, 96, 96);
-    color: white;
-    inline-size: fit-content; /* Ensure it only takes up as much space as its content */
-    justify-self: center; /* Center horizontally in the grid */
-    align-self: start; /* Align vertically under the image */
-    margin: 10px; /* Add spacing between buttons */
-}
-
-.button-container {
-    display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 10px; /* Add spacing between the buttons */
-    grid-column: 1 / -1; /* Span the entire width of the grid */
-    grid-row: 2; /* Place it in the second row */
-}
-
-#knap, #knap2 {
+    align-items: center;
     padding: 10px;
     background-color: rgb(96, 96, 96);
     color: white;
     inline-size: fit-content;
+    justify-self: center;
+    align-self: start;
+    margin: 10px;
 }

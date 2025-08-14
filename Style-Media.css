@@ -59,7 +59,7 @@ block-size: auto;
 object-fit: cover; /* Beskærer billederne til at passe i boksen */
 }
 
-.grid-sound {
+.grid-sound {/* Container til lydklip */
 margin-inline-start: 5%;
 margin-inline-end: 5%;
 display: grid;

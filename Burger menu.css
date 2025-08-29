@@ -10,24 +10,37 @@ header {
 }
 
 nav { /*Menu*/
-    background-color: #252753;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    block-size: 100px;
-    align-items: center;
-    inline-size: 100%;
     position: fixed;
-    inset-block-start: 0;
+    inset-block-start: -100px;
+    inline-size: 110%;
+    block-size: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
 
+    background-color: #252753;
+    flex-direction: row;
+    transform:rotate(2deg);
 }
 
-.menu { /*Gør teksten til en række*/
+nav img {
+    margin-block-start: 90%;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+.menu {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin-inline-end: 2.5%;
+    margin: 10%;
+    padding: 0px 40px; /* giver luft omkring teksten */
+    gap: 40px;
+
+    background-color: #252753; /* blå baggrund */
 }
+
 
 .menu li, .menu li a {
     color: #E7C305;
@@ -35,20 +48,15 @@ nav { /*Menu*/
     font-weight: 900;
     font-style: italic;
     font-size: 25px;
-
-    text-align: center; /* Centrer teksten inde i knappen */
     text-decoration: none;
     cursor: pointer;
-
-    margin: 5% 5px;
-    border-radius: 30px;
-
-    /* Tilføj disse linjer for ens størrelse */
-    display: inline-flex; /* Gør knapper fleksible */
-    justify-content: center; /* Centrer teksten horisontalt */
-    align-items: center; /* Centrer teksten vertikalt */
-    inline-size: 155px; /* Fast bredde */
-    block-size: 15px; /* Fast højde */
+    border-radius: 0;
+    inline-size: auto;
+    block-size: auto;
+    margin-block-start: 15%;
+    display: block; /* ikke flex */
+    padding: 0;
+    transform:rotate(-2deg);
 }
 
 .menu-box {
@@ -115,8 +123,9 @@ nav { /*Menu*/
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     inline-size: 100%; /* Full width */
-    inset-block-start: 13.6%; /* Adjust this value to position it below the nav */
-    padding: 14px; /* Giver lidt ekstra plads til tekst */
+    inset-block-start: -70%; /* Adjust this value to position it below the nav */
+    padding: 10%; /* Giver lidt ekstra plads til tekst */
+    inset-block-end: 80%;
 }
 
 .under_menu {
@@ -138,6 +147,7 @@ nav { /*Menu*/
     text-align: center; /* Center text */
     text-decoration: none; /* Remove underline */
     margin: 0 10px; /* Add some margin between items */
+    margin-block-start: 620px;
 }
 
 /*---------------------------Footer---------------------------*/

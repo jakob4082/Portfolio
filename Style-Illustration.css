@@ -105,7 +105,16 @@ hr { /*Under linge deler*/
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }  
+  }
+
+.grid-animation img {
+  margin-left: 5%;
+  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+  /* Skyggeeffekt */
+  inline-size: 30%;
+  block-size: auto;
+  object-fit: cover; /* Beskærer billederne til at passe i boksen */
+}
 
 /* ---------plakat gallery--------- */
 .grid-container {
@@ -123,7 +132,8 @@ hr { /*Under linge deler*/
     gap: 10px; /* Afstand mellem billedet og teksten */
     padding: 10px;
     background-color:rgba(0, 0, 0, 0.022); /* Valgfri baggrundsfarve */
-
+  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+  /* Skyggeeffekt */
 }
 
 /* Titel*/

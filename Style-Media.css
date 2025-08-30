@@ -23,74 +23,150 @@ color:gray;
 background-color:gray;
 }
 
-.grid-container {
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* 3 columns */
-gap: 5%;
-padding: 10px;
+
+/* --- Videos --- */
+.Card-video-Gallery {
+    margin-inline-start: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* space between cards, adjust as needed */
+    inline-size: 95%;/* Full width */
 }
 
-.grid-video {
-background-color: rgba(255, 0, 0, 0.5);
-padding: 10px;
-border-radius: 5px;
-max-inline-size: 460px; /* Limit width */
-inline-size: 100%; /* Fill available space within max-width */
-
-box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+.Card-Video {
+    max-inline-size: 510px; /* Limit width */
+    background: rgba(167, 11, 11, 0.758);
+    padding: .4em;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+  /* Skyggeeffekt */
 }
 
-.grid-video iframe {
-inline-size: 460px;
-block-size: 315px;
-max-block-size: 215px;
-border-radius: 5px;
+.card-games.special-bg {
+    background: rgba(12, 76, 34, 0.869); /* Example: DodgerBlue background */
 }
 
-.grid-video p {
-font-size: 15px;
+.Card-Video .card-video {
+    display: flex;/* Center the video */
+    justify-content: center;/* Center the video */
+    align-items: center;/* Center the video */
+    inline-size: 100%;/* Full width */
+    block-size: 150%;/* Full height */
+    margin-block-start: 2%;
 }
 
-.grid-animation img {
-box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
-/* Skyggeeffekt */
-inline-size: 30%;
-block-size: auto;
-object-fit: cover; /* Beskærer billederne til at passe i boksen */
+.Card-Video iframe {
+    display: block;
+    inline-size: 100%;
+    max-inline-size: 500px;
+    block-size: 280px;
 }
 
-.grid-sound {/* Container til lydklip */
-margin-inline-start: 5%;
-margin-inline-end: 5%;
-display: grid;
-grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
-gap: 5px; /* Afstand mellem billedet og teksten */
-padding: 10px;
-background-color: rgba(93, 187, 93, 0.5); /* Valgfri baggrundsfarve */
-border: 1px solid #ddd;
-align-items: stretch; /* Sørger for, at rækker strækkes til samme højde */
-border-radius: 25px;
+.Card-Video .category {
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 10px 7px 0;
+    align-items: center;
 }
 
-.grid-sound .item1 img {
-inline-size: 200px;
-block-size: 100%;
-object-fit: cover; /* Beskærer billederne til at passe i boksen */
-border-radius: 15px;
+.Card-Video .heading {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(232, 228, 228);
+    padding: 7px;
+    margin-block-end: 2%;
 }
 
-.half-height {
-display: flex;
-flex-direction: column;
-padding: 10px;
-font-family: mansalva, sans-serif;
-font-size: 16px; 
-font-weight: 400;
-font-style: normal;
+.Card-Video .author {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 20px;
+    padding-block-start: 20px;
 }
 
-.half-height iframe {
-inline-size: 100%;
-block-size: 100px; /* Gør, at iframe fylder hele pladsen */
-max-block-size: 200px; /* Maksimal højde for at matche billedets højde */
+/* --- Games --- */
+.Card-Gallery {
+    margin-inline-start: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card-games {
+    inline-size: 280px;
+    background: rgba(2, 3, 25, 0.869);
+    padding: .4em;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+    margin: 0; /* Add this line */
+}
+
+.card-games .card-image {
+    max-inline-size: 180px;
+    max-block-size: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    align-items: center;
+    margin: 0 auto; /* Center the card-image horizontally */
+}
+
+.card-games .card-image img {
+    display: block;
+    margin: 0 auto;
+    inline-size: 100%;
+    block-size: auto;
+}
+
+.card-games .card-video {
+    inline-size: 100%;
+    block-size: auto;
+    display: block;
+    margin-block-start: 2%;
+    margin-inline-start: 2%;
+}
+
+.card-games .category {
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 10px 7px 0;
+    align-items: center;
+}
+
+.card-games .category button {
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: rgb(255, 30, 30);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    align-items: center;
+}
+
+.card-games .category button a{
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+}
+
+.card-games .category button:hover {
+    background: rgb(35, 36, 0);
+    background: linear-gradient(90deg, rgb(255, 30, 30) 0%, rgb(255, 0, 0) 100%);
+}
+
+.card-games .category button:active {
+    transform: translate(0em, 0.2em);
+}
+
+.card-games .heading {
+    font-weight: 600;
+    color: rgb(232, 228, 228);
+    padding: 7px;
+    margin-block-end: 2%;
+}
+
+.card-games .author {
+    color: rgb(218, 218, 218);
+    font-weight: 400;
+    font-size: 12px;
+    padding-block-start: 20px;
 }

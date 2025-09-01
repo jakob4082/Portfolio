@@ -38,7 +38,6 @@ nav img {
     margin: 10%;
     padding: 0px 40px; /* giver luft omkring teksten */
     gap: 40px;
-
     background-color: #252753; /* blå baggrund */
 }
 
@@ -61,22 +60,26 @@ nav img {
 }
 
 .menu-box {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    inline-size: 60px;
-    block-size: 100%;
+    margin-inline-start: 160px;
+    display: none; /* Skjuler menuen som standard */
+    flex-direction: column;/* Gør menuen til en kolonne */
+    justify-content: center;/* Centerer indholdet lodret */
+    align-items: center;/* Centerer indholdet vandret */
+    inline-size: 60px;/* Bredde af menuen */
+    block-size: 100%;/* Højde af menuen */
 }
 
 .menu-icon {/*Burger Menu ikon udsene*/
     display: block;
+    margin-block-start: 70px;
+    margin-inline-start: -160px; /* Adjust value as needed */
     background-color: #E7C305;
-    block-size: 4px;
-    inline-size: 30px;
+    block-size: 4px; /* Height of the burger menu lines */
+    inline-size: 30px; /* Width of the burger menu lines */
     position: relative; /* Tilføjet position: relative */
-    border-radius: 2px;
+    border-radius: 2px; /* Rundede hjørner */
     transition: all 0.3s ease; /* Opdateret transition */
+    rotate: -2deg;
 }
 
 .menu-icon::before,.menu-icon::after { /*Burger Menu ikon udsene, top og bund*/
@@ -115,28 +118,30 @@ nav img {
 #menu-activate {
     display: none;
 }
+
 /*---------------------------Under menu------------------------*/
 .subnav {
-    position: fixed; /* Ensure subnav has a position property */
-    background-color: #E7C305; /* Change background color */
-    display: flex; /* Make subnav a flex container */
-    flex-direction: row; /* Align items horizontally */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    inline-size: 100%; /* Full width */
-    inset-block-start: -70%; /* Adjust this value to position it below the nav */
-    padding: 10%; /* Giver lidt ekstra plads til tekst */
-    inset-block-end: 80%;/* Adjust this value to position it above the content */
+    position: fixed;
+    background-color: #E7C305;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100%;
+    inset-block-start: -710px; /* or whatever height your nav is */
+    inset-inline-start: 0;
+    padding: 16px 0; /* Less padding for less height */
+    z-index: 9;
 }
 
 .under_menu {
-    margin-inline-start: -20%;
-    display: flex; /* Make under_menu a flex container */
-    flex-direction: row; /* Align items horizontally */
-    list-style-type: none; /* Remove list bullets */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    inline-size: 100%; /* Full width */
+    margin-inline-start: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100%;
 }
 
 .under_menu li, .under_menu a {
@@ -149,8 +154,10 @@ nav img {
     text-align: center; /* Center text */
     text-decoration: none; /* Remove underline */
     margin: 0 10px; /* Add some margin between items */
-    margin-block-start: 610px;/* Adjust this value to position it above the content */
+    margin-block-start: 810px;/* Adjust this value to position it above the content */
 }
+
+
 
 /*---------------------------Footer---------------------------*/
 footer {/*Footer*/
@@ -183,12 +190,14 @@ footer pfooter{
         position: absolute;
         inset-block-start: 0;
         inset-inline-end: 0;
-        margin-block-start: 100px;
+        margin-block-start: 195px;
+        margin-inline-end: 35px;
         background-color:rgba(37,39,83,0.84);
         flex-direction: column;
         inline-size: 30%;
         justify-content: center;
         align-items: center;
+        rotate: -2deg;
     }
 
     #menu-activate ~ .menu li {
@@ -209,4 +218,8 @@ footer pfooter{
 	footer,.subnav {/*Footer*/
 	display:none;
 	}
+
+    .menu li, .menu li a {
+        rotate: 2deg;
+    }
 }

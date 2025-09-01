@@ -108,7 +108,7 @@ hr { /*Under linge deler*/
   }
 
 .grid-animation img {
-  margin-left: 5%;
+  margin-inline-start: 5%;
   box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
   /* Skyggeeffekt */
   inline-size: 30%;
@@ -162,12 +162,9 @@ hr { /*Under linge deler*/
 /* ---------ændringer når skærmen er under 700px--------- */
 @media (max-width: 480px){
 	.Gallery{
-		margin-inline-start: 5%;
-		margin-inline-end: 5%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr); /* 6 kolonner med samme bredde */
-		gap: 15px; /* Mellemrum mellem billederne */
-		justify-items: center;
+    margin-inline-start: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 	}
 	
 	.Gallery img{
@@ -180,47 +177,60 @@ hr { /*Under linge deler*/
         inline-size: 100%;
       }
 
-	/* plakat gallery */
+
+/*Plakater*/
+
+/* plakat gallery */
 .grid-container {
-	margin-inline-start: 5%;
-    margin-inline-end: 5%;
+    margin-inline-start: 5%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
-    gap: 10px; /* Afstand mellem Poster_galleri */
+    grid-template-columns: repeat(3, 1fr);
 }
-
-/* Hver Poster_galleri holder sin indre grid-struktur */
 .plakater_felter {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr); /* To kolonner: billede og tekst */
-    gap: 10px; /* Afstand mellem billedet og teksten */
-    padding: 10px;
-    background-color:rgba(255,255,255,0.50); /* Valgfri baggrundsfarve */
-    border: 1px solid #ddd;
+    inline-size: 280px;
+    background: rgba(2, 3, 25, 0.869);
+    padding: .4em;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
+    margin: 0; /* Add this line */
 }
 
-/* Titel*/
-.plakater_felter .item1 {
-    grid-column: 1 / -1; /* Titel strækker sig over begge kolonner */
-    font-weight: bold;
-    padding-block-end: 0px;
-    font-size: 5px;
+.plakater_felter .Poster {
+    max-inline-size: 180px;
+    max-block-size: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+    align-items: center;
+    margin: 0 auto; /* Center the card-image horizontally */
 }
 
-/* Styling til billedet */
 .plakater_felter .Poster img {
-    inline-size: 100%; /* Billedet fylder sin kolonne */
-    max-inline-size: 108px; /* Begrænser bredden af billedet */
+    display: block;
+    margin: 0 auto;
+    inline-size: 100%;
     block-size: auto;
-    object-fit: cover;
 }
 
-/* Styling til beskrivelsen */
+.plakater_felter {
+    inline-size: 100%;
+    block-size: auto;
+    display: block;
+    margin-block-start: 2%;
+    margin-inline-start: 2%;
+}
+
+.plakater_felter .item1 {
+    font-weight: 600;
+    color: rgb(232, 228, 228);
+    padding: 7px;
+    margin-block-end: 2%;
+}
+
 .plakater_felter p {
-    margin: 0;
-    padding: 0px;
-    font-size: 5%;
-    color: #333;
+    color: rgb(218, 218, 218);
+    font-weight: 400;
+    font-size: 12px;
+    padding-block-start: 20px;
 }
 	
 }

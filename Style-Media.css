@@ -170,3 +170,23 @@ background-color:gray;
     font-size: 12px;
     padding-block-start: 20px;
 }
+
+@media screen and (max-width: 700px) { /*Når menuen kommer under 700px*/
+    .Card-video-Gallery, .Card-Gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+        padding: .4em;
+    }
+
+    .Card-Video, .card-games {
+        max-inline-size: 100%; /* Fyld hele bredden */
+    }
+
+    .Card-Video iframe, .card-games .card-video {
+        block-size: 200px; /* Juster højden */
+    }
+
+    .card-games .category button {
+    display: none;
+    }
+    
+}

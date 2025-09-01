@@ -127,13 +127,12 @@ hr { /*Under linge deler*/
 
 /* Hver Poster_galleri holder sin indre grid-struktur */
 .plakater_felter {
-    display: grid;
-    grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
-    gap: 10px; /* Afstand mellem billedet og teksten */
-    padding: 10px;
-    background-color:rgba(0, 0, 0, 0.022); /* Valgfri baggrundsfarve */
-  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
-  /* Skyggeeffekt */
+  display: grid;
+  grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
+  gap: 10px; /* Afstand mellem billedet og teksten */
+  padding: 10px;
+  background-color:rgba(0, 0, 0, 0.022); /* Valgfri baggrundsfarve */
+  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5); /* Skyggeeffekt */
 }
 
 /* Titel*/
@@ -160,7 +159,7 @@ hr { /*Under linge deler*/
 }
 
 /* ---------ændringer når skærmen er under 700px--------- */
-@media (max-width: 480px){
+@media screen and (max-width: 700px) { /*Når menuen kommer under 700px*/
 	.Gallery{
     margin-inline-start: 5%;
     display: grid;
@@ -168,8 +167,9 @@ hr { /*Under linge deler*/
 	}
 	
 	.Gallery img{
-	inline-size: 100%; /* Fyld hele grid-cellen */
-    block-size: 180px; /* Ens højde for alle billeder */
+	  inline-size: 100%; /* Fyld hele grid-cellen */
+    block-size: 160px; /* Ens højde for alle billeder */
+    inline-size: 160px;
     object-fit: cover; /* Beskærer billederne til at passe i boksen */
 	}
 	
@@ -177,9 +177,22 @@ hr { /*Under linge deler*/
         inline-size: 100%;
       }
 
+/* animation*/
+.grid-animation{
+  margin-inline-start: 5%;
+  inline-size: 160px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.grid-animation b img{
+  	inline-size: 100%; /* Fyld hele grid-cellen */
+    block-size: 180px; /* Ens højde for alle billeder */
+    inline-size: 270px;
+    object-fit: cover; /* Beskærer billederne til at passe i boksen */
+}
 
 /*Plakater*/
-
 /* plakat gallery */
 .grid-container {
     margin-inline-start: 5%;
@@ -188,11 +201,11 @@ hr { /*Under linge deler*/
 }
 .plakater_felter {
     inline-size: 280px;
-    background: rgba(2, 3, 25, 0.869);
     padding: .4em;
     border-radius: 6px;
-    box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
     margin: 0; /* Add this line */
+      background-color:rgba(0, 0, 0, 0.022); /* Valgfri baggrundsfarve */
+  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5); /* Skyggeeffekt */
 }
 
 .plakater_felter .Poster {
@@ -220,16 +233,17 @@ hr { /*Under linge deler*/
 }
 
 .plakater_felter .item1 {
+  font-size: 16px;
     font-weight: 600;
-    color: rgb(232, 228, 228);
+        color: #333;
     padding: 7px;
     margin-block-end: 2%;
 }
 
 .plakater_felter p {
-    color: rgb(218, 218, 218);
+        color: #333;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     padding-block-start: 20px;
 }
 	

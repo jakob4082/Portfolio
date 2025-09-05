@@ -128,19 +128,18 @@ hr { /*Under linge deler*/
 /* Hver Poster_galleri holder sin indre grid-struktur */
 .plakater_felter {
   display: grid;
-  grid-template-columns: auto 1fr; /* To kolonner: billede og tekst */
-  gap: 10px; /* Afstand mellem billedet og teksten */
+  grid-template-columns: auto 1fr;
+  gap: 10px;
   padding: 10px;
-  background-color:rgba(0, 0, 0, 0.022); /* Valgfri baggrundsfarve */
-  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5); /* Skyggeeffekt */
+  background-color:rgba(0, 0, 0, 0.022);
+  box-shadow: 10px 10px 10px rgba(56, 56, 56, 0.5);
 }
 
-/* Titel*/
 .plakater_felter .item1 {
-    grid-column: 1 / -1; /* Titel strækker sig over begge kolonner */
-    font-weight: bold;
-    padding-block-end: 0px;
-    font-size: 18px;
+  grid-column: 1 / -1; /* Title spans both columns */
+  font-weight: bold;
+  font-size: 18px;
+  padding-block-end: 0px;
 }
 
 /* Styling til billedet */
@@ -246,5 +245,5 @@ hr { /*Under linge deler*/
     font-size: 14px;
     padding-block-start: 20px;
 }
-	
+
 }

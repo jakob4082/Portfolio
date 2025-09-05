@@ -91,6 +91,9 @@ background-color:gray;
     grid-template-columns: repeat(3, 1fr);
 }
 .card-games {
+        inline-size: 100%;
+    max-inline-size: 100%;
+    box-sizing: border-box;
     inline-size: 280px;
     background: rgba(2, 3, 25, 0.869);
     padding: .4em;
@@ -131,6 +134,7 @@ background-color:gray;
 }
 
 .card-games .category button {
+    inline-size: 100%;
     padding: 0.5em 2em;
     border: transparent;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
@@ -155,6 +159,13 @@ background-color:gray;
 
 .card-games .category button:active {
     transform: translate(0em, 0.2em);
+}
+
+.card-games .category iframe {
+    inline-size: 100% !important;
+    max-inline-size: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .card-games .heading {

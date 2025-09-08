@@ -27,6 +27,7 @@ background-color:gray;
 /* --- Videos --- */
 .Card-video-Gallery {
     margin-inline-start: 5%;
+    margin-inline-end: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     gap: 20px; /* space between cards, adjust as needed */
@@ -43,7 +44,11 @@ background-color:gray;
 }
 
 .card-games.special-bg {
-    background: rgba(12, 76, 34, 0.869); /* Example: DodgerBlue background */
+    background: rgba(12, 76, 34, 0.869);
+    margin-inline-end: 5%;
+    inline-size: 340px;
+    max-inline-size: 340px;
+    min-block-size: 400px; /* Optional: minimum height */
 }
 
 .Card-Video .card-video {

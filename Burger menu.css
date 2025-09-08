@@ -166,11 +166,11 @@ footer {/*Footer*/
 	flex-direction: row;
     justify-content: space-between;
 	align-items: center;
-	inset-block-end: 0;
+	inset-block-end: 0%;
 	block-size: 60px;
 	inline-size: 100%;
 	background-color: #252753;
-	inset-block-end: 0;
+	inset-block-end: 0%;
 }
 
 footer pfooter{

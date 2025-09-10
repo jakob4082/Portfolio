@@ -60,10 +60,13 @@ hr { /*Under linge deler*/
   
   /* Modal Content (Image) */
   .modal-content {
-    margin: auto;
     display: block;
-    inline-size: 80%;
-    max-inline-size: 700px;
+    margin: 0 auto;
+    max-inline-size: 75vw;   /* Maximum inline-size: 75% of viewport */
+    max-block-size: 75vh;  /* Maximum block-size: 75% of viewport */
+    inline-size: auto;
+    block-size: auto;
+    object-fit: contain;
   }
   
   /* Caption of Modal Image (Image Text) */

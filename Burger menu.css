@@ -25,6 +25,7 @@ nav { /*Menu*/
 }
 
 nav img {
+    display: none;
     margin-block-start: 90%;
     padding-inline-start: 20%;
     max-inline-size: 100%;

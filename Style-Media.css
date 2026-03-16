@@ -97,7 +97,8 @@ background-color:gray;
 .Card-Gallery {
     margin-inline-start: 5%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    
 }
 
 .card-games {

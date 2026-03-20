@@ -47,3 +47,10 @@ function handleFilterClick(button, category) {
         container.classList.add('open');
     }
 }
+
+function swapMandoImage(src) {
+    const mainImage = document.getElementById('mainMandoImage');
+    if (mainImage) {
+        mainImage.src = src;
+    }
+}

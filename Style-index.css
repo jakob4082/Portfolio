@@ -184,10 +184,10 @@ body {
 
 /*---------------- MORE WORK ----------------*/
 .more-work {
-    max-inline-size: 1100px;
     margin: 0 auto 70px auto;
     padding: 30px 20px;
     text-align: center;
+    background-color: var(--primary-blue);
 }
 
 .more-work .filter-header {
@@ -273,10 +273,98 @@ body {
     padding: 40px 20px;
 }
 
+/* Containeren til de små kort */
+.pane-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-block-start: 20px;
+}
+
+/* Basis styling for alle sub-cards */
+.sub-card {
+    border-radius: 12px;
+    padding: 20px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sub-card:hover {
+    transform: translateY(-5px);
+}
+
+.sub-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #ffffff; /* Eller var(--accent-yellow) hvis det skal poppe mere */
+}
+
+.sub-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Farve-kategorier (Mutede versioner af dine eksempler) */
+.card-video { background-color: #4a1212; }  /* Mørkerød */
+.card-audio { background-color: #163020; }  /* Mørkegrøn */
+.card-marketing { background-color: #252753; } /* Din brand-blå */
+.card-creative { background-color: #2a2a2a; }  /* Mørkegrå */
+
+/* Media styling (YouTube / Spotify embeds) */
+.card-media {
+    inline-size: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.card-media iframe {
+    inline-size: 100%;
+    block-size: 100%;
+    border: none;
+}
+
+/* Mandalorian Special Layout */
+.mando-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Illustration venstre, tekst højre */
+    gap: 30px;
+    grid-column: 1 / -1; /* Gør kortet bredt */
+    background-color: #1a2035;
+    padding: 30px;
+}
+
+.main-display-img {
+    inline-size: 100%;
+    border-radius: 15px;
+    border: 1px solid #FCF202;
+}
+
+.mando-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-block-start: 15px;
+}
+
+.mando-thumb {
+    inline-size: 65px;
+    block-size: 65px;
+    border-radius: 10px; /* Rundede hjørner som i din skitse */
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
 /* --- ABOUT/PERSONALITY SEKTION --- */
 .about-me-section {
-    background-color: var(--primary-blue);
-    padding: 100px 40px;
+    padding: 40px;
     color: white;
 }
 

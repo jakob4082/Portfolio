@@ -203,7 +203,7 @@ body {
     font-size: 0.9rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: white;
     margin: 0;
 }
 
@@ -241,7 +241,7 @@ body {
     position: relative;
     background: transparent;
     border: none;
-    color: var(--text-dim);
+    color: var(--accent-yellow);
     padding: 12px 25px;
     font-size: 0.9rem;
     font-weight: 700;

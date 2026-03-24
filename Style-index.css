@@ -1,5 +1,5 @@
 :root {
-    --bg-color: rgb(23, 23, 23);        /* Bevar den sorte baggrund for det moderne look */
+    --bg-color: rgb(23, 23, 23);/* Bevar den sorte baggrund for det moderne look */
     --primary-blue: #252753;    /* Din nye brand-blå */
     --accent-yellow: #FCF202;   /* Din CTA-gul */
     --text-main: #ffffff;
@@ -137,7 +137,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: var(--accent-color);
+    border-color: var(--accent-yellow);
 }
 
 .project-image {
@@ -284,13 +284,15 @@ body {
 /* Basis styling for alle sub-cards */
 .sub-card {
     border-radius: 12px;
-    padding: 20px;
+    padding: 20px; /* Dette dækker allerede alle sider */
     text-align: start;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
+    /* Vigtigt for at fjerne det tomme rum i bunden */
+    align-self: start;
+    block-size: fit-content;
 }
 
 .sub-card:hover {
@@ -329,6 +331,28 @@ body {
     inline-size: 100%;
     block-size: 100%;
     border: none;
+}
+
+.card-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 15px;
+}
+
+.podcast-logo {
+    inline-size: 160px;
+    block-size: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.game-layout{
+    inline-size: 100%;
+    max-inline-size: 100%;
+    box-sizing: border-box;
+    inline-size: 280px;
+    border-radius: 6px;
 }
 
 /* Mandalorian Special Layout */
@@ -464,9 +488,9 @@ body {
 
 .footer-brand {
     color: #f2c200;
-    font-size: clamp(1.25rem, 3vw, 2rem);
     font-weight: 800;
     letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
 }
 
 .footer-social {
@@ -483,8 +507,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255,255,255,0.08);
     color: var(--accent-yellow);
+    border: 2px solid var(--accent-yellow);
     text-decoration: none;
     transition: transform 0.15s ease, background 0.15s ease;
 }

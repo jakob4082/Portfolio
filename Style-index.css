@@ -341,6 +341,16 @@ body {
     }
 }
 
+.category-description {
+    text-align: center;
+    max-inline-size: 600px;
+    margin: 20px auto 30px auto; /* Giver luft til kortene nedenunder */
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7); /* Lidt mere dæmpet end overskrifter */
+    font-style: italic;
+    line-height: 1.5;
+}
+
 /* Containeren til de små kort */
 .pane-grid {
     display: grid; /* Uses CSS Grid */

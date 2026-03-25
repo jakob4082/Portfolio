@@ -1,3 +1,4 @@
+/* CSS Custom Properties */
 :root {
     --bg-color: rgb(23, 23, 23);/* Bevar den sorte baggrund for det moderne look */
     --primary-blue: #252753;    /* Din nye brand-blå */
@@ -8,10 +9,12 @@
     --card-bg: #252753f9;
 }
 
+/* Global Box Sizing */
 * {
     box-sizing: border-box;
 }
 
+/* Base Body Styles */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -22,20 +25,20 @@ body {
 
 /* Hero Sektion */
 .hero {
-    block-size: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
+    block-size: 80vh; /* Sets height to 80% of viewport height */
+    display: flex; /* Uses flexbox for centering */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center; /* Centers text */
+    padding: 0 20px; /* Adds horizontal padding */
 }
 
 .badge {
-    color: var(--accent-yellow);
-    font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    color: var(--accent-yellow); /* Uses accent yellow color */
+    font-weight: 700; /* Makes text bold */
+    letter-spacing: 3px; /* Adds space between letters */
+    font-size: 0.75rem; /* Sets font size */
+    text-transform: uppercase; /* Converts text to uppercase */
 }
 
 .project-tag {
@@ -53,14 +56,14 @@ body {
 }
 
 .view-link:hover {
-    border-block-end: 2px solid var(--accent-yellow);
+    border-block-end: 2px solid var(--accent-yellow); /* Adds bottom border on hover */
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 8vw, 4.5rem);
-    font-weight: 900;
-    margin: 15px 0;
-    line-height: 1.1;
+    font-size: clamp(2rem, 8vw, 4.5rem); /* Responsive font size */
+    font-weight: 900; /* Extra bold */
+    margin: 15px 0; /* Vertical margin */
+    line-height: 1.1; /* Tight line height */
 }
 
 .hero-sub {
@@ -71,39 +74,41 @@ body {
 }
 
 .cta-primary {
-    background-color: var(--accent-yellow); /* Din gule farve */
-    color: var(--primary-blue);            /* Mørkeblå tekst for bedst læsbarhed på gul */
-    padding: 16px 35px;
-    border-radius: 5px;
-    font-weight: 900;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: none;
+    border: 2px solid var(--accent-yellow); /* Yellow border */
+    color: var(--accent-yellow); /* Yellow text */           /* Mørkeblå tekst for bedst læsbarhed på gul */
+    padding: 16px 35px; /* Padding inside button */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: 900; /* Bold text */
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Inline block display */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
 }
 
 .cta-primary:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Lifts the button slightly on hover */
     box-shadow: 0 10px 20px rgba(252, 242, 2, 0.2); /* Subtilt gult skær ved hover */
+    border: none;
+    background-color: var(--accent-yellow);
+    color: var(--primary-blue); /* Skift tekstfarve til blå ved hover for kontrast */
 }
 
 /* --- TRUST BAR (Bjælken) --- */
 .trust-bar {
-    background-color: var(--primary-blue); /* Her bruger vi din blå */
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
+    background-color: var(--primary-blue); /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Centers text */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 2px; /* Letter spacing */
 }
 
 .dot { opacity: 0.3; }
 
 /* Projekter - 3 Kolonner */
 .projects-container {
-    max-inline-size: 1200px;
-    margin: 100px auto;
-    padding: 0 20px;
+    max-inline-size: 1200px; /* Max width */
+    margin: 100px auto; /* Centers container */
+    padding: 0 20px; /* Horizontal padding */
 }
 
 .section-title {
@@ -113,12 +118,12 @@ body {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    display: grid; /* Uses CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 30px; /* Gap between items */
 }
 
-/* Responsivitet for mobilen */
+/* Mobil responsivitet for projekter grid */
 @media (max-width: 992px) {
     .projects-grid {
         grid-template-columns: 1fr;
@@ -126,34 +131,34 @@ body {
 }
 
 .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    background: var(--card-bg); /* Card background */
+    border: 1px solid var(--border); /* Subtle border */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Hides overflow */
+    transition: all 0.3s ease; /* Smooth transition */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent-yellow);
+    transform: translateY(-8px); /* Lifts card on hover */
+    border-color: var(--accent-yellow); /* Changes border color */
 }
 
 .project-image {
-    inline-size: 100%;
-    aspect-ratio: 16 / 10;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    font-weight: bold;
-    border-block-end: 1px solid var(--border);
+    inline-size: 100%; /* Full width */
+    aspect-ratio: 16 / 10; /* Aspect ratio */
+    background: #111; /* Dark background */
+    display: flex; /* Flex for centering */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    border-block-end: 1px solid var(--border); /* Bottom border */
 }
 
 .project-content {
-    padding: 30px;
+    padding: 30px; /* Padding inside */
 }
 
 .project-tag {
@@ -165,63 +170,88 @@ body {
 }
 
 .project-content h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
+    margin: 0 0 10px 0; /* Margin */
+    font-size: 1.4rem; /* Font size */
 }
 
 .project-content p {
-    color: var(--text-dim);
-    font-size: 0.95rem;
-    margin-block-end: 25px;
+    color: var(--text-dim); /* Dim text color */
+    font-size: 0.95rem; /* Font size */
+    margin-block-end: 25px; /* Bottom margin */
 }
 
 .view-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
+    color: var(--accent-color); /* Uses accent color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Bold text */
+    font-size: 0.9rem; /* Font size */
 }
 
 /*---------------- MORE WORK ----------------*/
 .more-work {
-    margin: 0 auto 70px auto;
-    padding: 30px 20px;
-    text-align: center;
-    background-color: var(--primary-blue);
+    margin: 0 auto 70px auto; /* Centers and adds bottom margin */
+    padding: 30px 20px; /* Padding */
+    text-align: center; /* Centers text */
+    background-color: var(--primary-blue); /* Blue background */
 }
 
 .more-work .filter-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    margin-inline: auto;
-    max-inline-size: 900px;
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    align-items: center; /* Centers items */
+    gap: 22px; /* Gap between items */
+    margin-inline: auto; /* Centers horizontally */
+    max-inline-size: 900px; /* Max width */
 }
 
 .more-work .filter-header p {
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: white;
-    margin: 0;
+    font-size: 0.9rem; /* Font size */
+    letter-spacing: 0.2em; /* Letter spacing */
+    text-transform: uppercase; /* Uppercase text */
+    color: white; /* White color */
+    margin: 0; /* No margin */
 }
 
 /* Containeren til knapperne */
 .filter-nav-container {
-    display: inline-flex;
-    position: relative;
-    padding: 5px;
-    overflow: hidden;
-    margin-inline: auto;
-    gap: 20px;
-	border-radius: 20px;
+    display: inline-flex; /* Inline flex */
+    flex-wrap: wrap; /* Wrap items */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    position: relative; /* Relative positioning */
+    padding: 5px; /* Padding */
+    overflow: hidden; /* Hides overflow */
+    margin-inline: auto; /* Centers */
+    gap: 12px; /* Gap between items */
+    border-radius: 20px; /* Rounded corners */
 }
 
 .filter-nav-container .filter-btn {
-    margin: 0;
+    margin: 0; /* No margin */
+    flex: 0 1 auto; /* Flexible sizing */
+    min-inline-size: 120px; /* Min width */
+    max-inline-size: 220px; /* Max width */
+    white-space: nowrap; /* No text wrapping */
 }
 
+.filter-btn {
+    position: relative; /* Relative positioning */
+    z-index: 1; /* Above slider */
+}
+
+.filter-slider {
+    position: absolute; /* Absolute positioning */
+    inset-block-start: 5px; /* Top offset */
+    inset-inline-start: 0; /* Left offset */
+    block-size: calc(100% - 10px); /* Height calculation */
+    inline-size: 0; /* Initial width */
+    background-color: var(--accent-yellow); /* Yellow background */
+    border-radius: 20px; /* Rounded corners */
+    transition: left 0.25s ease, width 0.25s ease; /* Smooth transitions */
+    z-index: 0; /* Below buttons */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* No pointer events */
+}
 
 /* Den glidende baggrund */
 .filter-slider {
@@ -229,313 +259,398 @@ body {
     inset-block-start: 5px;
     inset-inline-start: 5px;
     block-size: calc(100% - 10px);
-    inline-size: 0; /* Opdateres via JS */
+    inline-size: 0;
     background-color: var(--accent-yellow);
     border-radius: 20px;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 0.25s ease;
     z-index: 0;
     opacity: 0;
+    pointer-events: none;
+}
+
+.filter-btn {
+    position: relative; /* Relative positioning */
+    z-index: 1; /* Above slider */
+}
+
+.filter-btn.active {
+    color: #252753; /* Din mørkeblå farve */
 }
 
 .filter-btn {
     position: relative;
     background: transparent;
-    border: none;
+    border: 2px solid #FCF202;
     color: var(--accent-yellow);
     padding: 12px 25px;
     font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
-    z-index: 1; /* Sørger for at teksten er over slideren */
-    transition: color 0.3s ease;
+    z-index: 1;
+    transition: color 0.3s ease, background-color 0.3s ease;
     white-space: nowrap;
-	border: 2px solid #FCF202;
-	border-radius: 50px;
+    border-radius: 50px;
 }
 
 .filter-btn.active {
-    color: #252753; /* Din gule tekst når aktiv */
+    color: #252753; /* Blue text when active */
 }
 
 /* Opdatering af indholdskassen */
 .filter-content-container {
-    max-block-size: 0;
-    opacity: 0;
-    transform: translateY(20px);
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    max-block-size: 0; /* Initially collapsed */
+    opacity: 0; /* Initially transparent */
+    transform: translateY(20px); /* Initially offset */
+    overflow: hidden; /* Hides content */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transition */
 }
 
 .filter-content-container.open {
-    max-block-size: 1000px;
-    opacity: 1;
-    transform: translateY(0);
-    padding: 40px 20px;
+    max-block-size: 1000px; /* Expanded height */
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* No offset */
+    padding: 40px 20px; /* Padding when open */
+}
+
+@media (max-width: 768px) {
+    .filter-nav-container {
+        display: flex;
+        flex-wrap: wrap; /* Knapperne hopper ned på næste linje */
+        justify-content: center;
+        gap: 10px;
+        inline-size: 100%;
+    }
+
+    /* Skjul slideren her, da den ikke kan håndtere flere linjer */
+    .filter-slider {
+        display: none;
+    }
+
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        /* Sørg for at knapperne har en fast bredde eller fylder naturligt */
+        flex-grow: 0; 
+    }
+
+    /* Når slideren er væk, skal den aktive knap selv have den gule farve */
+    .filter-btn.active {
+        background-color: var(--accent-yellow);
+        color: #252753;
+        border-color: var(--accent-yellow);
+    }
 }
 
 /* Containeren til de små kort */
 .pane-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    padding-block-start: 20px;
+    display: grid; /* Uses CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit columns with min 300px */
+    gap: 25px; /* Gap between items */
+    padding-block-start: 20px; /* Top padding */
 }
 
 /* Basis styling for alle sub-cards */
 .sub-card {
-    border-radius: 12px;
-    padding: 20px; /* Dette dækker allerede alle sider */
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: transform 0.3s ease;
-    /* Vigtigt for at fjerne det tomme rum i bunden */
-    align-self: start;
-    block-size: fit-content;
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Padding inside */ /* Dette dækker allerede alle sider */
+    text-align: start; /* Left align text */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    gap: 15px; /* Gap between elements */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+    align-self: start; /* Align to start */
+    block-size: fit-content; /* Fit content height */
+    align-self: start; /* Align to start */ /* Sikrer at kortet ikke strækker sig unødigt */
+    block-size: fit-content; /* Fit content height */
 }
 
 .sub-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Lifts card on hover */
 }
 
 .sub-card h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #ffffff; /* Eller var(--accent-yellow) hvis det skal poppe mere */
+    font-size: 1.2rem; /* Font size */
+    margin: 0; /* No margin */
+    color: #ffffff; /* White color */ /* Eller var(--accent-yellow) hvis det skal poppe mere */
 }
 
 .sub-card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
+    font-size: 0.9rem; /* Font size */
+    line-height: 1.5; /* Line height */
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    margin: 0; /* No margin */
 }
 
 /* Farve-kategorier (Mutede versioner af dine eksempler) */
 .card-video { background-color: #4a1212; }  /* Mørkerød */
 .card-audio { background-color: #163020; }  /* Mørkegrøn */
-.card-marketing { background-color: #252753; } /* Din brand-blå */
+.card-marketing { background-color: #dee0ff4e; } /* Din brand-blå */
 .card-creative { background-color: #2a2a2a; }  /* Mørkegrå */
+
+
+/* Layout til Marketing & Design med høje billeder */
+.layout-side-by-side .card-content {
+    display: flex; /* Flex layout */
+    flex-direction: row; /* Horizontal layout */ /* Billede og tekst ved siden af hinanden */
+    gap: 20px; /* Gap between elements */
+    align-items: flex-start; /* Align to top */
+}
+
+.layout-side-by-side .card-media {
+    flex: 1; /* Takes 1 part of space */ /* Billedet tager ca. halvdelen af pladsen */
+    max-inline-size: 45%; /* Max width 45% */ /* Juster denne for at ændre billedets bredde */
+}
+
+.layout-side-by-side .card-text {
+    flex: 1.2; /* Takes 1.2 parts of space */ /* Giver teksten lidt mere plads */
+}
+
+/* Responsivitet: På mobilen skal det stadig være under hinanden */
+@media (max-width: 768px) {
+    .layout-side-by-side .card-content {
+        flex-direction: column; /* Vertical layout on mobile */
+    }
+    .layout-side-by-side .card-media {
+        max-inline-size: 100%; /* Full width on mobile */
+    }
+}
 
 /* Media styling (YouTube / Spotify embeds) */
 .card-media {
-    inline-size: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-    background: #000;
+    inline-size: 100%; /* Full width */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hides overflow */
+    aspect-ratio: 16 / 9; /* 16:9 aspect ratio */
+    background: #000; /* Black background */
 }
 
 .card-media iframe {
-    inline-size: 100%;
-    block-size: 100%;
-    border: none;
+    inline-size: 100%; /* Full width */
+    block-size: 100%; /* Full height */
+    border: none; /* No border */
 }
 
 .card-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-block-end: 15px;
+    display: flex; /* Flex layout */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
 }
 
 .podcast-logo {
-    inline-size: 160px;
-    block-size: auto;
-    object-fit: contain;
-    display: block;
+    inline-size: 200px; /* Width */
+    block-size: auto; /* Auto height */
+    object-fit: contain; /* Contain image */
+    display: block; /* Block display */
+    border-radius: 15px; /* Rounded corners */
 }
 
 .game-layout{
-    inline-size: 100%;
-    max-inline-size: 100%;
-    box-sizing: border-box;
-    inline-size: 280px;
-    border-radius: 6px;
+    inline-size: 100%; /* Full width */
+    max-inline-size: 100%; /* Max width */
+    box-sizing: border-box; /* Include padding in width */
+    inline-size: 280px; /* Fixed width */
+    border-radius: 6px; /* Rounded corners */
 }
 
 /* Mandalorian Special Layout */
 .mando-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Illustration venstre, tekst højre */
-    gap: 30px;
-    grid-column: 1 / -1; /* Gør kortet bredt */
-    background-color: #1a2035;
-    padding: 30px;
+    display: grid; /* CSS Grid */
+    grid-template-columns: 1fr 1.5fr; /* Two columns */ /* Illustration venstre, tekst højre */
+    gap: 30px; /* Gap between columns */
+    grid-column: 1 / -1; /* Span full width */ /* Gør kortet bredt */
+    background-color: #1a2035; /* Dark blue background */
+    padding: 30px; /* Padding */
 }
 
 .main-display-img {
-    inline-size: 100%;
-    border-radius: 15px;
-    border: 1px solid #FCF202;
+    inline-size: 100%; /* Full width */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #FCF202; /* Yellow border */
 }
 
 .mando-thumbnails {
-    display: flex;
-    gap: 10px;
-    margin-block-start: 15px;
+    display: flex; /* Flex layout */
+    gap: 10px; /* Gap between thumbnails */
+    margin-block-start: 15px; /* Top margin */
 }
 
 .mando-thumb {
-    inline-size: 65px;
-    block-size: 65px;
-    border-radius: 10px; /* Rundede hjørner som i din skitse */
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s;
+    inline-size: 65px; /* Width */
+    block-size: 65px; /* Height */
+    border-radius: 10px; /* Rounded corners */ /* Rundede hjørner som i din skitse */
+    object-fit: cover; /* Cover image */
+    cursor: pointer; /* Pointer cursor */
+    transition: transform 0.2s; /* Smooth transform */
 }
+
+/* Specifik farve til Creative Lab / Doodles */
+.card-creative {
+    background-color: #2a2a2a; /* Mørkegrå som vi aftalte */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* En meget svag kant for detaljegrad */
+}
+
+/* Styling af selve billed-containeren */
+.card-media img {
+    inline-size: 100%; /* Full width */
+    block-size: auto; /* Auto height */
+    border-radius: 8px; /* Bløde hjørner på dine tegninger */
+    display: block; /* Block display */
+    object-fit: cover; /* Cover image */
+}
+
+/* Tekst styling */
+.sub-card p {
+    font-size: 0.9rem; /* Font size */
+    line-height: 1.6; /* Line height */
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    margin: 0; /* No margin */
+}
+
 
 /* --- ABOUT/PERSONALITY SEKTION --- */
 .about-me-section {
-    padding: 40px;
-    color: white;
+    padding: 40px; /* Padding */
+    color: white; /* White text */
 }
 
 .about-me-section .badge {
-    color: var(--accent-yellow);
+    color: var(--accent-yellow); /* Yellow color */
 }
 
 .about-container {
-    max-inline-size: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Tekst fylder lidt mere end billedet */
-    gap: 60px;
-    align-items: center;
+    max-inline-size: 1100px; /* Max width */
+    margin: 0 auto; /* Centers container */
+    display: grid; /* CSS Grid */
+    grid-template-columns: 1.2fr 0.8fr; /* Two columns */ /* Tekst fylder lidt mere end billedet */
+    gap: 60px; /* Gap between columns */
+    align-items: center; /* Centers vertically */
 }
 
 .about-content {
-    text-align: start;
+    text-align: start; /* Left align text */
 }
 
 .about-content h2 {
-    font-size: 3rem;
-    margin: 20px 0;
-    line-height: 1.2;
+    font-size: 3rem; /* Large font size */
+    margin: 20px 0; /* Vertical margin */
+    line-height: 1.2; /* Tight line height */
 }
 
 .about-content p {
-    font-size: 1.1rem;
-    color: var(--text-dim);
-    margin-block-end: 30px;
-    max-inline-size: 500px;
+    font-size: 1.1rem; /* Font size */
+    color: var(--text-dim); /* Dim text color */
+    margin-block-end: 30px; /* Bottom margin */
+    max-inline-size: 500px; /* Max width */
 }
 
 /* Knappen til About Me */
 .cta-secondary {
-    display: inline-block;
-    color: var(--accent-yellow);
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid var(--accent-yellow);
-    padding: 12px 25px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    display: inline-block; /* Inline block */
+    color: var(--accent-yellow); /* Yellow text */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    border: 1px solid var(--accent-yellow); /* Yellow border */
+    padding: 12px 25px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 .cta-secondary:hover {
-    background: var(--accent-yellow);
-    color: var(--bg-color);
+    background: var(--accent-yellow); /* Yellow background on hover */
+    color: var(--bg-color); /* Dark text on hover */
 }
 
 /* Billedet i højre side */
 .about-image img {
     inline-size: 100%;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Adds a shadow for depth */
     filter: grayscale(20%); /* Giver et professionelt look */
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease; /* Smooth transition for filter change */
 }
 
 .about-image img:hover {
-    filter: grayscale(0%);
+    filter: grayscale(0%); /* Removes grayscale on hover to show full color */
 }
 
 /* Responsiv til mobil */
 @media (max-width: 850px) {
     .about-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 1fr; /* Single column on mobile */
+        text-align: center; /* Center text */
     }
     
     .about-content {
-        text-align: center;
+        text-align: center; /* Center text */
     }
 
     .about-content p {
-        margin: 0 auto 30px auto;
+        margin: 0 auto 30px auto; /* Center and bottom margin */
     }
 }
 
+/* Site Footer */
 .site-footer {
-    background-color: var(--primary-blue);
-    color: var(--accent-yellow);
-    padding: 24px 18px;
-    border-block-start: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--primary-blue); /* Blue background */
+    color: var(--accent-yellow); /* Yellow text */
+    padding: 24px 18px; /* Padding */
+    border-block-start: 1px solid rgba(255, 255, 255, 0.1); /* Top border */
 }
 
 .footer-content {
-    max-inline-size: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding-inline: 10px;
+    max-inline-size: 1200px; /* Max width */
+    margin: 0 auto; /* Centers container */
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Centers vertically */
+    gap: 20px; /* Gap */
+    flex-wrap: wrap; /* Wrap on small screens */
+    padding-inline: 10px; /* Horizontal padding */
 }
 
-.footer-brand {
-    color: #f2c200;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    font-family: 'Inter', sans-serif;
-}
 
 .footer-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
+    display: flex; /* Flex layout */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    gap: 14px; /* Gap between icons */
 }
 
 .footer-social a {
-    inline-size: 42px;
-    block-size: 42px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-yellow);
-    border: 2px solid var(--accent-yellow);
-    text-decoration: none;
-    transition: transform 0.15s ease, background 0.15s ease;
+    inline-size: 42px; /* Width */
+    block-size: 42px; /* Height */
+    border-radius: 50%; /* Circular */
+    display: inline-flex; /* Inline flex */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    color: var(--accent-yellow); /* Yellow color */
+    border: 2px solid var(--accent-yellow); /* Yellow border */
+    text-decoration: none; /* No underline */
+    transition: transform 0.15s ease, background 0.15s ease; /* Smooth transitions */
 }
 
 .footer-social a:hover {
-    background: var(--accent-yellow);
-    transform: translateY(-2px);
-	color: var(--primary-blue);
+    background: var(--accent-yellow); /* Yellow background on hover */
+    transform: translateY(-2px); /* Lifts on hover */
+	color: var(--primary-blue); /* Blue text on hover */
 }
 
 .footer-copy {
-    color: #b8b8b8;
-    font-size: 0.9rem;
-    white-space: nowrap;
+    color: #b8b8b8; /* Light gray color */
+    font-size: 0.9rem; /* Font size */
+    white-space: nowrap; /* No wrapping */
 }
 
 .footer-copyright {
-    display: none;
+    display: none; /* Hidden */
 }
-
-@media (max-width: 900px) {
+/* Mobil layout for about sektionen */@media (max-inline-size: 900px) {
     .footer-content {
-        justify-content: center;
-        text-align: center;
+        justify-content: center; /* Centers items */
+        text-align: center; /* Centers text */
     }
     .footer-copy {
-        inline-size: 100%;
+        inline-size: 100%; /* Full width */
     }
 }
 

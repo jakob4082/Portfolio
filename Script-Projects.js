@@ -1,5 +1,8 @@
 // Script-Projects.js
+// Script for Projects.html - handles image cycling and expansion in galleries
+
 function imgchange(){
+    // Cycles to the next image in the Mandalorian gallery sequence
     var image = document.getElementById("img");
     
     if (image.src.match("img/Mandocoplay1.jpg")){
@@ -12,6 +15,7 @@ function imgchange(){
 }
 
 function imgchangeback(){
+    // Cycles to the previous image in the Mandalorian gallery sequence
     var image = document.getElementById("img");
     
     if (image.src.match("img/Mandocoplay3.jpg")){
@@ -24,6 +28,7 @@ function imgchangeback(){
 }
 
 function myFunction(imgs) {
+  // Expands the clicked image in a modal overlay for detailed view
   // Get the expanded image
   var expandImg = document.getElementById("expandedImg");
   // Get the image text

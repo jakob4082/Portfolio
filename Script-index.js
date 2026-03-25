@@ -1,8 +1,15 @@
+// Script for index.html - handles filter navigation and image swapping
+
 function handleFilterClick(button, category) {
+    // Select the sliding background element for the active button
     const slider = document.querySelector('.filter-slider');
+    // Select the content area that expands to show filtered content
     const container = document.getElementById('filter-content-area');
+    // Select all filter panes (content sections)
     const panes = document.querySelectorAll('.filter-pane');
+    // Select all filter buttons
     const buttons = document.querySelectorAll('.filter-btn');
+    // Select the specific pane for the clicked category
     const targetPane = document.getElementById(category);
     
     // Tjek om knappen man trykker på allerede er den aktive
@@ -49,6 +56,7 @@ function handleFilterClick(button, category) {
 }
 
 function swapMandoImage(src) {
+    // Swaps the main image in the Mandalorian section when a thumbnail is clicked
     const mainImage = document.getElementById('mainMandoImage');
     if (mainImage) {
         mainImage.src = src;

@@ -64,3 +64,45 @@ function swapMandoImage(src) {
         }, 100);
     }
 }
+
+// --- MODAL IMAGE FUNCTIONALITY ---
+function initModalImages() {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // Get all images with modal-trigger class
+    const triggerImages = document.querySelectorAll("img.modal-trigger");
+
+    // Setup click handler for each image
+    triggerImages.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt || ""; // Use alt text as caption, empty if no alt
+        }
+    });
+
+    // Close modal when clicking the X button
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    modal.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Close modal with Escape key
+    document.onkeydown = function(event) {
+        if (event.key === "Escape" && modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    }
+}
+
+// Initialize modal images when page loads
+document.addEventListener("DOMContentLoaded", initModalImages);

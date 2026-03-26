@@ -394,7 +394,7 @@ body {
 /* Farve-kategorier (Mutede versioner af dine eksempler) */
 .card-video { background-color: #4a1212; }  /* Mørkerød */
 .card-audio { background-color: #163020; }  /* Mørkegrøn */
-.card-marketing { background-color: #dee0ff4e; } /* Din brand-blå */
+.card-marketing { background-color: #e9e9ecb3; } /* Din brand-blå */
 .card-creative { background-color: #2a2a2a; }  /* Mørkegrå */
 
 
@@ -462,20 +462,9 @@ body {
     border-radius: 6px; /* Rounded corners */
 }
 
-/* Mandalorian Special Layout */
-.mando-layout {
-    display: grid; /* CSS Grid */
-    grid-template-columns: 1fr 1.5fr; /* Two columns */ /* Illustration venstre, tekst højre */
-    gap: 30px; /* Gap between columns */
-    grid-column: 1 / -1; /* Span full width */ /* Gør kortet bredt */
-    background-color: #1a2035; /* Dark blue background */
-    padding: 30px; /* Padding */
-}
-
 .main-display-img {
     inline-size: 100%; /* Full width */
     border-radius: 15px; /* Rounded corners */
-    border: 1px solid #FCF202; /* Yellow border */
 }
 
 .mando-thumbnails {
@@ -515,7 +504,6 @@ body {
     color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     margin: 0; /* No margin */
 }
-
 
 /* --- ABOUT/PERSONALITY SEKTION --- */
 .about-me-section {
@@ -651,9 +639,6 @@ body {
     white-space: nowrap; /* No wrapping */
 }
 
-.footer-copyright {
-    display: none; /* Hidden */
-}
 /* Mobil layout for about sektionen */@media (max-inline-size: 900px) {
     .footer-content {
         justify-content: center; /* Centers items */
@@ -661,6 +646,105 @@ body {
     }
     .footer-copy {
         inline-size: 100%; /* Full width */
+    }
+}
+
+/* --- MODAL IMAGE STYLING --- */
+/* Style images that trigger modal */
+img.modal-trigger {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+img.modal-trigger:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top of everything */
+    padding-block-start: 50px; /* Location of the box */
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%; /* Full width */
+    block-size: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.95); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;/*  */
+    inline-size: 90%;/* Responsive width */
+    max-inline-size: 900px;/* Max width */
+    max-block-size: 85vh;/* Max height - fits in viewport */
+    block-size: auto;/* Auto height to maintain aspect ratio */
+    object-fit: contain;/* Keep aspect ratio and fit in box */
+    border-radius: 8px;
+}
+
+/* Caption of Modal Image (Image Text) */
+#caption {
+    margin: auto;
+    display: block;
+    inline-size: 90%;
+    max-inline-size: 900px;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoomModal;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoomModal {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    inset-block-start: 20px;
+    inset-inline-end: 30px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-yellow);
+}
+
+/* Responsive modal on smaller screens */
+@media only screen and (max-width: 768px) {
+    .modal {
+        padding-block-start: 30px;
+    }
+
+    .modal-content {
+        inline-size: 95%;
+    }
+
+    #caption {
+        inline-size: 95%;
+    }
+
+    .close {
+        inset-block-start: 15px;
+        inset-inline-end: 15px;
+        font-size: 32px;
     }
 }
 

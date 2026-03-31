@@ -354,9 +354,10 @@ body {
 /* Containeren til de små kort */
 .pane-grid {
     display: grid; /* Uses CSS Grid */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit columns with min 300px */
-    gap: 25px; /* Gap between items */
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 items are in the same row */
+    gap: 20px; /* Adds spacing between items */
     padding-block-start: 20px; /* Top padding */
+    justify-content: center; /* Center the cards horizontally */
 }
 
 /* Basis styling for alle sub-cards */
@@ -413,6 +414,30 @@ body {
 
 .layout-side-by-side .card-text {
     flex: 1.2; /* Takes 1.2 parts of space */ /* Giver teksten lidt mere plads */
+}
+
+.layout-side-by-side .card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Make children equal height */
+    gap: 20px;
+}
+
+.layout-side-by-side .card-media {
+    flex: 1;
+    max-inline-size: 45%;
+    block-size: 100%; /* Take full height of the card-content */
+    aspect-ratio: unset; /* Remove aspect ratio for this layout */
+    display: flex;
+    align-items: stretch;
+}
+
+.layout-side-by-side .card-media img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover; /* or 'contain' if you want the whole image visible */
+    border-radius: 8px;
+    display: block;
 }
 
 /* Responsivitet: På mobilen skal det stadig være under hinanden */
@@ -491,6 +516,14 @@ body {
 /* Styling af selve billed-containeren */
 .card-media img {
     inline-size: 100%; /* Full width */
+    block-size: auto; /* Auto height */
+    border-radius: 8px; /* Bløde hjørner på dine tegninger */
+    display: block; /* Block display */
+    object-fit: cover; /* Cover image */
+}
+
+.card-poster img {
+    inline-size: 75%; /* Full width */
     block-size: auto; /* Auto height */
     border-radius: 8px; /* Bløde hjørner på dine tegninger */
     display: block; /* Block display */

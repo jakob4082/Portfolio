@@ -3,294 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jakob KJ</title>
-
-<link rel="icon" type="image/png" href="img/JK logo.png">
-
-<link href="Style-index.css" rel="stylesheet" type="text/css">
-<script src="Script-index.js"></script>
+<title>Jakob KJ's Portfolio</title>
+<link rel="icon" type="image/png" href="img/JK_logo.png">
+	<link href="Burger menu.css" rel="stylesheet" type="text/css">
+	<link href="Style-index.css" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" href="https://use.typekit.net/djm4wpj.css">	
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body style="background-color:rgba(37,39,83,0.84);">
 
-<header class="hero">
-    <div class="hero-content">
-    <p class="badge" style="font-size: 15px;">MULTIMEDIEDESIGNER</p>
-    <h1>Design & Marketing der skaber vækst.</h1>
-    <p class="hero-sub">Specialist i 3D-content, UX/UI og vinder af Game Jam. Jeg transformerer idéer til interaktive oplevelser.</p>
-    <a href="#cases" class="cta-primary">Se udvalgte cases</a>
-    </div>
-</header>
-
-<div class="trust-bar">
-    <span>ARTIS</span>
-    <span class="dot">•</span>
-    <span>GAME DESIGN</span>
-    <span class="dot">•</span>
-    <span>GAME JAM WINNER</span>
+<!-- ----menu+burger---- -->
+<nav>
+	<div>
+		<img src="img/Skærmbillede 2024-11-07 100441.png" width="115px" alt="Demon_icon"> 
+	</div>
+<input id="menu-activate" type="checkbox">
+	<label class="menu-box" for="menu-activate">
+		<div class="menu-icon">
+			
+		</div>
+	</label>
+<ul class="menu">
+	<li><a href="Index.html">Home</a></li>
+	<li><a href="Illustration - kunst.html">Illustration</a></li>
+	<li><a href="Digital art - video_animation_og_lyd.html">Other Stuff</a></li>
+	<li><a href="About.html">About</a></li>
+</ul>
+</nav>
+<!-- ----Selve siden---- -->
+	<br><br><br><br><br><br><br><br><br><br><br>
+<div>
+	<h1 style="scroll-margin-top: 150px;">Hi And Welcome To <br> Jakob K Jensen’s <br> Portfolio</h1>
+	<br>
+	<p>Have A Look Around To See And Hope <br>To Understand What Goes On Inside<br>This Man’s Head</p>
+	<br><br><br><br><br><br><br>
 </div>
 
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- Udvalgte Cases start --- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-<main id="cases" class="projects-container">
-    <h2 class="section-title">Udvalgte Cases</h2>
-    <div class="projects-grid">
-
-    <article class="project-card">
-        <div class="project-image">
-            <span>ZENCY MOCKUP</span>
-        </div>
-        <div class="project-content">
-            <span class="project-tag">UX/UI • Figma • Meta Ads</span>
-            <h3>Zency</h3>
-            <p>Redesign af hjemmeside og optimering af annonceringsflow for øget konvertering.</p>
-            <a href="#" class="view-link">Se case →</a>
-        </div>
-    </article>
-
-    <article class="project-card">
-    <div class="project-image">
-        <span>GAME JAM WINNER</span>
-    </div>
-    <div class="project-content">
-        <span class="project-tag">Spildesign • Kodning</span>
-        <h3>Space 10</h3>
-        <p>Vinderprojekt udviklet til Game Jam. Fokus på engagerende spilmekanik og brugerfastholdelse.</p>
-        <a href="#" class="view-link">Se projekt →</a>
-    </div>
-    </article>
-
-    <article class="project-card">
-    <div class="project-image">
-        <span>DYREPARK MOCKUP</span>
-    </div>
-    <div class="project-content">
-        <span class="project-tag">Branding • Interactive</span>
-        <h3>Skandinavisk Dyrepark</h3>
-        <p>Interaktive løsninger og digitalt design til en af Danmarks førende dyreparker.</p>
-        <a href="#" class="view-link">Se løsning →</a>
-    </div>
-    </article>
-
-    </div>
-</main>
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- Vil du se mere? start --- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-<section class="more-work">
-    <div class="filter-header">
-        <p>VIL DU SE MERE af det, jeg har lavet?</p>
-        <div class="filter-nav-container">
-            <div class="filter-slider"></div>
-            
-            <button class="filter-btn" onclick="handleFilterClick(this, 'marketing')">Marketing & Design</button>
-            <button class="filter-btn" onclick="handleFilterClick(this, 'motion')">Content & Motion</button>
-            <button class="filter-btn" onclick="handleFilterClick(this, 'interactive')">Interactive Solutions</button>
-            <button class="filter-btn" onclick="handleFilterClick(this, 'lab')">Creative Lab</button>
-        </div>
-    </div>
-
-    <div id="filter-content-area" class="filter-content-container">
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- Marketing & Design start --- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-        <div id="marketing" class="filter-pane">
-            <div class="category-description">
-                <p>Strategisk design og datadrevne løsninger, der skaber synlig vækst og stærke visuelle identiteter.</p>
-            </div>
-            <div class="pane-grid">
-                <div class="sub-card card-marketing layout-side-by-side">
-                    <h3>JD promotion poster</h3>
-                    <div class="card-content">
-                        <div class="card-media">
-                            <img src="poster.jpg" alt="Ræk ud mand poster" class="modal-trigger">
-                        </div>
-                        <div class="card-text">
-                            <span class="badge">Original Design</span>
-                            <p>This was made as a finals project at HTX mercantec, about Mens Mental health. Done in a collaboration with Mandecentret...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sub-card card-marketing layout-side-by-side">
-                    <h3>JD promotion poster</h3>
-                    <div class="card-content">
-                        <div class="card-media">
-                            <img src="poster.jpg" alt="Ræk ud mand poster" class="modal-trigger" loading="lazy">
-                        </div>
-                        <div class="card-text">
-                            <span class="badge">Original Design</span>
-                            <p>This was made as a finals project at HTX mercantec, about Mens Mental health. Done in a collaboration with Mandecentret...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-card card-creative layout-side-by-side">
-                    <h3>Vibekode Email</h3>
-                    <div class="card-content">
-                        <div class="card-media">
-                            <img src="email.jpg" alt="Vibekode Email" class="modal-trigger">
-                        </div>
-                        <div class="card-text">
-                            <span class="badge">Original Design</span>
-                            <p>E-mail marketing flows.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- Content & Motion start --- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-        <div id="motion" class="filter-pane">
-            <div class="category-description">
-                <p>Visuel storytelling gennem dynamisk videoproduktion, lyddesign og motion graphics.</p>
-            </div>            
-            <div class="pane-grid">
-                <div class="sub-card card-video">
-                    <h3>Lé College Noir gravity falls intro</h3>
-                    <div class="card-media">
-                        <iframe src="https://www.youtube.com/embed/e2ZS-1Enrws?si=i0GiSyswnA3d3Ig5" title="YouTube video player" allowfullscreen></iframe>
-                    </div>
-                    <p>This is a little fan project edit for Lé College Noir, I feel people don't really talk about it and I hope this would help get some eyes on it. I think people that like Gravity Falls could enjoy it.</p>
-                </div>
-
-                <div class="sub-card card-video">
-                    <h3>God of War Gameplay</h3>
-                    <div class="card-media">
-                        <iframe src="https://www.youtube.com/embed/QFH90vSgGIc?si=9A70_sQNTQauuaUQ" title="YouTube video player" allowfullscreen></iframe>
-                    </div>
-                    <p>This was part of a project, where we needed to make a new game trailer, but with a twist: Instead of focusing on story, this focuses more on combat. For this I did all the editing and recording.</p>
-                </div>
-
-                <div class="sub-card card-audio">
-                    <div class="card-header">
-                        <h3>Trylleviser fra Skovbunden</h3>
-                    </div>
-                    <div class="card-logo-container">
-                        <img src="img/trylleviser logo.png" alt="Trylleviser fra Skovbunden Logo" class="podcast-logo">
-                    </div>
-                    <div class="card-body">
-                        <p>A podcast where I did most of the sound editing. The idea was to make a story podcast for 6-10 children that tells old folktales, but keeps the messed-up part in. <br> <br> For the time being, there are only three episodes, plus two more of which are not being worked on, and it is only in Danish. Listen to the first episode 1 here.</p>
-                        <br>
-                        <div class="spotify-container">
-                            <iframe src="https://open.spotify.com/embed/episode/5uWhyC7B4ZU3ZM8g14JZo2?utm_source=generator" width="100%" height="152" frameBorder="0" allow="encrypted-media" class="spotify-embed"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- Interactive Solutions start --- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-        <div id="interactive" class="filter-pane">
-            <div class="category-description">
-                <p>Brugercentrerede digitale oplevelser, hvor funktionalitet og interaktion går hånd i hånd.</p>
-            </div>
-            <div class="pane-grid">
-                <div class="sub-card card-creative game-layout">
-                    <h3>10SPACE10</h3>
-                    <div class="card-logo-container">
-                        <img src="img/10SPACE10.gif" alt="10SPACE10_cockpit" class="podcast-logo modal-trigger">
-                    </div>
-                    <p>This was my submission to Viborg Game Jam at the Viborg Animation Festival 2025, where the judges picked it as the winners. I did some of the art and the sound.</p>
-                    <a href="https://copycath.itch.io/space10" target="_blank" class="view-link">Try it out</a>
-                </div>
-
-                <div class="sub-card card-creative game-layout">
-                    <h3>Animal sorting game</h3>
-                    <div class="card-logo-container">
-                        <img src="img/Polar ræv.png" alt="Animal sorting game" class="podcast-logo modal-trigger">
-                    </div>
-                    <p>A Scandinavian zoo asked the small group to create a little game that could help visitors to the park learn about the animals. <br><br>Ours is a swipe game where you have to sort animal facts. Most of what I did here was UI design, such as animal icons and "beautification".</p>
-                    <a href="https://copycath.itch.io/space10" target="_blank" class="view-link">Try it out</a>
-                </div>
-            </div>
-        </div>
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- creative lab start --- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-        <div id="lab" class="filter-pane">
-            <div class="category-description">
-                <p>Min personlige legeplads for eksperimenter - her finder du alt fra 3D-print til illustrationer lavet i min fritid.</p>
-            </div>
-            <div class="pane-grid">
-                <!-- bluey creator -->
-                <div class="sub-card card-creative">
-                    <h3>Animal sorting game</h3>
-                    <div class="card-media">
-                        <img src="img/Polar ræv.png" alt="Animal sorting game" class="podcast-logo modal-trigger">
-                    </div>
-                    <span class="badge">Original Design</span>
-                    <p>A Scandinavian zoo asked the small group to create a little game that could help visitors to the park learn about the animals.</p>
-                </div>
-
-                <!-- Space Race -->
-                <div class="sub-card card-creative card-game">
-                    <h3>Animal sorting game</h3>
-                    <div class="card-logo-container">
-                        <img src="img/Polar ræv.png" alt="Animal sorting game" class="podcast-logo modal-trigger">
-                    </div>
-                    <span class="badge">Original Design</span>
-                    <p>A Scandinavian zoo asked the small group to create a little game that could help visitors to the park learn about the animals.</p>
-                </div>
-
-                <!-- Mandalorian Cosplay -->
-                <div class="sub-card card-creative">
-                    <h3>Mandalorian Cosplay</h3>
-                    <div class="card-media">
-                        <img src="img/MeMando.png" id="mainMandoImage" alt="Mandalorian Design" class="main-display-img modal-trigger">
-                    </div>
-                    <div class="mando-content">
-                        <div class="card-header">
-                            <span class="badge">Original Design</span>
-                        </div>
-                        <div class="card-body">
-                            <p>For a long time Boba Fett was my favorite character and wanted my own armor, but it wasn't until The Mandalorian-show where i decided to try and make my own cosplay, of an original design.</p>
-                            <p>It been made from a lot of different materials and styles, materials like pvc, plastic, 3d print, cardboard and paper mache.</p>
-                            <div class="mando-thumbnails">
-                                <img src="img/MeMando.png" onclick="swapMandoImage(this.src)" alt="Process 1" class="mando-thumb">
-                                <img src="img/Mandocoplay1.jpg" onclick="swapMandoImage(this.src)" alt="Process 2" class="mando-thumb">
-                                <img src="img/Mandocoplay2.jpg" onclick="swapMandoImage(this.src)" alt="Process 3" class="mando-thumb">
-                                <img src="img/Mandocoplay3.jpg" onclick="swapMandoImage(this.src)" alt="Process 4" class="mando-thumb">
-                                <img src="img/Mandocoplay4.jpg" onclick="swapMandoImage(this.src)" alt="Process 5" class="mando-thumb">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div> <!-- close filter-content-area -->
-</section>
-
-<section class="about-me-section">
-    <div class="about-container">
-        <div class="about-content">
-            <span class="badge">OM MIG</span>
-            <h2>Detaljer betyder alt</h2>
-            <p>Uanset om jeg programmerer komplekse systemer, designer interfaces eller bygger en Mandalorian-rustning fra bunden, er mit fokus altid på finish og den ultimative brugeroplevelse.</p>
-            <a href="about.html" class="cta-secondary">Læs mere om mig →</a>
-        </div>
-        <div class="about-image">
-            <img src="dit-billede.jpg" alt="Mig selv eller Mandalorian projekt">
-        </div>
-    </div>
-</section>
-
-<!-- Modal Structure -->
-<div id="imageModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
-  <div id="caption"></div>
-</div>
-
-<footer class="site-footer">
-    <div class="footer-content">
-        <h3>Jakob K Jensen</h3>
-        <div class="footer-social">
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        <div class="footer-copy">© 2026 All rights reserved.</div>
-    </div>
+<!-- ----footer---- -->
+<br>
+<footer>
+	<pfooter>Copyright © All rights reserved. <br> jakob4082@gmail.com</pfooter>
 </footer>
-
 </body>
 </html>

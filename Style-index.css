@@ -33,9 +33,11 @@ body {
     padding: 0 20px; /* Adds horizontal padding */
 }
 
-.badge {
+.badge, .about-me-section .about-content .badge {
     color: var(--accent-yellow); /* Uses accent yellow color */
-    font-weight: 700; /* Makes text bold */
+    font-family: 'Rift', sans-serif; /* Uses Rift font */
+    font-style: italic; /* Italic text */
+    font-weight: bold; /* Bold text */
     letter-spacing: 3px; /* Adds space between letters */
     font-size: 0.75rem; /* Sets font size */
     text-transform: uppercase; /* Converts text to uppercase */
@@ -43,8 +45,11 @@ body {
 
 .project-tag {
     color: var(--accent-yellow); /* Gør tags gule så de popper på den mørke baggrund */
+    font-family: 'Rift', sans-serif; /* Uses Rift font */
+    font-style: italic; /* Italic and bold */
     font-weight: bold;
-    font-size: 0.75rem;
+    letter-spacing: 3px; /* Adds space between letters */
+    font-size: 15px; /* Sets font size */
 }
 
 .view-link {
@@ -162,7 +167,7 @@ body {
 }
 
 .project-tag {
-    font-size: 0.7rem;
+    font-size: 15px; /* Font size */
     color: var(--accent-yellow);
     font-weight: bold;
     display: block;
@@ -544,10 +549,6 @@ body {
     color: white; /* White text */
 }
 
-.about-me-section .badge {
-    color: var(--accent-yellow); /* Yellow color */
-}
-
 .about-container {
     max-inline-size: 1100px; /* Max width */
     margin: 0 auto; /* Centers container */
@@ -593,16 +594,12 @@ body {
 
 /* Billedet i højre side */
 .about-image img {
-    inline-size: 100%;
+    inline-size: 90%;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Adds a shadow for depth */
-    filter: grayscale(20%); /* Giver et professionelt look */
     transition: filter 0.3s ease; /* Smooth transition for filter change */
 }
 
-.about-image img:hover {
-    filter: grayscale(0%); /* Removes grayscale on hover to show full color */
-}
 
 /* Responsiv til mobil */
 @media (max-width: 850px) {

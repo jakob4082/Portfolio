@@ -143,6 +143,7 @@ body {
     transition: all 0.3s ease; /* Smooth transition */
     display: flex; /* Flex layout */
     flex-direction: column; /* Vertical stacking */
+    
 }
 
 .project-card:hover {
@@ -152,13 +153,10 @@ body {
 
 .project-image {
     inline-size: 100%; /* Full width */
-    aspect-ratio: 16 / 10; /* Aspect ratio */
     background: #111; /* Dark background */
     display: flex; /* Flex for centering */
-    align-items: center; /* Vertical center */
     justify-content: center; /* Horizontal center */
-    color: #333; /* Text color */
-    font-weight: bold; /* Bold text */
+    object-fit: cover;
     border-block-end: 1px solid var(--border); /* Bottom border */
 }
 

@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
 /* Base Body Styles */
 body {
     margin: 0;
@@ -25,6 +29,7 @@ body {
 
 /* Hero Sektion */
 .hero {
+    position: relative; /* Allows absolute positioning of video */
     block-size: 80vh; /* Sets height to 80% of viewport height */
     display: flex; /* Uses flexbox for centering */
     align-items: center; /* Centers content vertically */
@@ -32,10 +37,21 @@ body {
     text-align: center; /* Centers text */
     padding: 0 20px; /* Adds horizontal padding */
 }
+.hero-video {
+    position: absolute; /* Positions video absolutely */
+    inset: 0; /* Stretches video to cover the hero section */
+    inline-size: 100%; /* Full width */
+    block-size: 100%; /* Full height */
+    object-fit: cover; /* Ensures video covers the area without distortion */
+    z-index: -1; /* Places video behind content */
+    filter: brightness(0.5); /* Darkens video for better text contrast */
+}
 
-.badge {
+.badge, .about-me-section .about-content .badge {
     color: var(--accent-yellow); /* Uses accent yellow color */
-    font-weight: 700; /* Makes text bold */
+    font-family: 'Rift', sans-serif; /* Uses Rift font */
+    font-style: italic; /* Italic text */
+    font-weight: bold; /* Bold text */
     letter-spacing: 3px; /* Adds space between letters */
     font-size: 0.75rem; /* Sets font size */
     text-transform: uppercase; /* Converts text to uppercase */
@@ -43,8 +59,11 @@ body {
 
 .project-tag {
     color: var(--accent-yellow); /* Gør tags gule så de popper på den mørke baggrund */
+    font-family: 'Rift', sans-serif; /* Uses Rift font */
+    font-style: italic; /* Italic and bold */
     font-weight: bold;
-    font-size: 0.75rem;
+    letter-spacing: 3px; /* Adds space between letters */
+    font-size: 15px; /* Sets font size */
 }
 
 .view-link {
@@ -137,7 +156,7 @@ body {
     overflow: hidden; /* Hides overflow */
     transition: all 0.3s ease; /* Smooth transition */
     display: flex; /* Flex layout */
-    flex-direction: column; /* Vertical stacking */
+    flex-direction: column; /* Vertical stacking */   
 }
 
 .project-card:hover {
@@ -145,16 +164,13 @@ body {
     border-color: var(--accent-yellow); /* Changes border color */
 }
 
-.project-image {
+.project-image img {
     inline-size: 100%; /* Full width */
-    aspect-ratio: 16 / 10; /* Aspect ratio */
-    background: #111; /* Dark background */
-    display: flex; /* Flex for centering */
-    align-items: center; /* Vertical center */
-    justify-content: center; /* Horizontal center */
-    color: #333; /* Text color */
-    font-weight: bold; /* Bold text */
-    border-block-end: 1px solid var(--border); /* Bottom border */
+    block-size: auto; /* Auto height */
+    border-radius: 8px; /* Bløde hjørner på dine tegninger */
+    display: block; /* Block display */
+    object-fit: cover; /* Cover image */
+    margin-inline: auto;
 }
 
 .project-content {
@@ -162,7 +178,7 @@ body {
 }
 
 .project-tag {
-    font-size: 0.7rem;
+    font-size: 15px; /* Font size */
     color: var(--accent-yellow);
     font-weight: bold;
     display: block;
@@ -355,7 +371,7 @@ body {
 .pane-grid {
     display: grid; /* Uses CSS Grid */
     grid-template-columns: repeat(3, 1fr); /* Ensures 3 items are in the same row */
-    gap: 20px; /* Adds spacing between items */
+    gap: 30px; /* Adds spacing between items */
     padding-block-start: 20px; /* Top padding */
     justify-content: center; /* Center the cards horizontally */
 }
@@ -544,10 +560,6 @@ body {
     color: white; /* White text */
 }
 
-.about-me-section .badge {
-    color: var(--accent-yellow); /* Yellow color */
-}
-
 .about-container {
     max-inline-size: 1100px; /* Max width */
     margin: 0 auto; /* Centers container */
@@ -593,16 +605,12 @@ body {
 
 /* Billedet i højre side */
 .about-image img {
-    inline-size: 100%;
+    inline-size: 90%;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.4); /* Adds a shadow for depth */
-    filter: grayscale(20%); /* Giver et professionelt look */
     transition: filter 0.3s ease; /* Smooth transition for filter change */
 }
 
-.about-image img:hover {
-    filter: grayscale(0%); /* Removes grayscale on hover to show full color */
-}
 
 /* Responsiv til mobil */
 @media (max-width: 850px) {

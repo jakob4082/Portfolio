@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
 /* Base Body Styles */
 body {
     margin: 0;
@@ -25,12 +29,22 @@ body {
 
 /* Hero Sektion */
 .hero {
+    position: relative; /* Allows absolute positioning of video */
     block-size: 80vh; /* Sets height to 80% of viewport height */
     display: flex; /* Uses flexbox for centering */
     align-items: center; /* Centers content vertically */
     justify-content: center; /* Centers content horizontally */
     text-align: center; /* Centers text */
     padding: 0 20px; /* Adds horizontal padding */
+}
+.hero-video {
+    position: absolute; /* Positions video absolutely */
+    inset: 0; /* Stretches video to cover the hero section */
+    inline-size: 100%; /* Full width */
+    block-size: 100%; /* Full height */
+    object-fit: cover; /* Ensures video covers the area without distortion */
+    z-index: -1; /* Places video behind content */
+    filter: brightness(0.5); /* Darkens video for better text contrast */
 }
 
 .badge, .about-me-section .about-content .badge {
@@ -142,8 +156,7 @@ body {
     overflow: hidden; /* Hides overflow */
     transition: all 0.3s ease; /* Smooth transition */
     display: flex; /* Flex layout */
-    flex-direction: column; /* Vertical stacking */
-    
+    flex-direction: column; /* Vertical stacking */   
 }
 
 .project-card:hover {
@@ -151,13 +164,13 @@ body {
     border-color: var(--accent-yellow); /* Changes border color */
 }
 
-.project-image {
+.project-image img {
     inline-size: 100%; /* Full width */
-    background: #111; /* Dark background */
-    display: flex; /* Flex for centering */
-    justify-content: center; /* Horizontal center */
-    object-fit: cover;
-    border-block-end: 1px solid var(--border); /* Bottom border */
+    block-size: auto; /* Auto height */
+    border-radius: 8px; /* Bløde hjørner på dine tegninger */
+    display: block; /* Block display */
+    object-fit: cover; /* Cover image */
+    margin-inline: auto;
 }
 
 .project-content {
@@ -358,7 +371,7 @@ body {
 .pane-grid {
     display: grid; /* Uses CSS Grid */
     grid-template-columns: repeat(3, 1fr); /* Ensures 3 items are in the same row */
-    gap: 20px; /* Adds spacing between items */
+    gap: 30px; /* Adds spacing between items */
     padding-block-start: 20px; /* Top padding */
     justify-content: center; /* Center the cards horizontally */
 }

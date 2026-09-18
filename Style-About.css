@@ -29,8 +29,9 @@ body {
 }
 
 h1 {
+    margin: 100px 0 20px 0;
     padding-inline-start: 5%;
-    Font-weight: bold;
+    font-weight: bold;
     font-size: 40px;
     font-family: guyot-sans, sans-serif;
     font-style: normal;
@@ -42,6 +43,10 @@ hr { /*Under linge deler*/
     block-size:2px;
     border-width:0;
     background-color: var(--border);
+}
+
+nav{
+        position: fixed;
 }
 
 .cta-secondary {
@@ -135,6 +140,10 @@ hr { /*Under linge deler*/
     .socials a.facebook:hover { background: #1877f2; }
     .socials a.youtube:hover { background: #ff0000; }
     .socials a.Google:hover { background: #0F9D58; }
+
+.CV-button {
+    margin: 0 0 20px 150px;
+}
 
     /* Site Footer */
 .site-footer {

@@ -45,13 +45,14 @@ hr { /*Under linge deler*/
 }
 
 .cta-secondary {
+    border-style: solid;
+    border-inline-start-style: none;
     display: inline-block; /* Inline block */
     color: var(--accent-yellow); /* Yellow text */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
-    border: 1px solid var(--accent-yellow); /* Yellow border */
-    padding: 12px 25px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
+    padding: 12px 30px; /* Padding */
+    border-radius: 0 5px 5px 0; /* Rounded corners */
     transition: all 0.3s ease; /* Smooth transition */
 }
 

@@ -44,6 +44,22 @@ hr { /*Under linge deler*/
     background-color: var(--border);
 }
 
+.cta-secondary {
+    display: inline-block; /* Inline block */
+    color: var(--accent-yellow); /* Yellow text */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    border: 1px solid var(--accent-yellow); /* Yellow border */
+    padding: 12px 25px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.cta-secondary:hover {
+    background: var(--accent-yellow); /* Yellow background on hover */
+    color: var(--bg-color); /* Dark text on hover */
+}
+
     .about-container {
       max-inline-size: 1000px;
       margin: 40px auto;

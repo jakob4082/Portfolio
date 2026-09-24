@@ -6,7 +6,7 @@
     --accent-yellow: #FCF202;   /* Din CTA-gul */
     --text-main: #ffffff;
     --text-dim: #a0a0a0;
-    --border: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.163);
     --card-bg: #252753f9;
 }
 
@@ -46,10 +46,10 @@ hr { /*Under linge deler*/
 }
 
 nav{
-        position: fixed;
+    position: fixed;
 }
 
-.cta-secondary {
+.Tilbage {
     border-style: solid;
     border-inline-start-style: none;
     display: inline-block; /* Inline block */
@@ -66,87 +66,116 @@ nav{
     color: var(--bg-color); /* Dark text on hover */
 }
 
-    .about-container {
-      max-inline-size: 1000px;
-      margin: 40px auto;
-      background: var(--card-bg);
-      padding: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 20px;
-      border-radius: 10px;
-    }
+.about-container {
+    max-inline-size: 1000px;
+    margin: 40px auto;
+    background: var(--card-bg);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 10px;
+}
 
-    .about-text {
-      flex: 2;
-      min-inline-size: 300px;
-    }
+.about-text {
+    flex: 2;
+    min-inline-size: 300px;
+}
 
-    .about-text h2 {
-      font-size: 28px;
-      margin-block-end: 15px;
-    }
+.about-text h2 {
+    font-size: 28px;
+    margin-block-end: 15px;
+}
 
-    .about-text p {
-      line-height: 1.6;
-      margin-block-end: 15px;
-    }
+.about-text p {
+    line-height: 1.6;
+    margin-block-end: 15px;
+}
 
-    .about-image {
-      flex: 1;
-      text-align: center;
-    }
+.about-image {
+    flex: 1;
+    text-align: center;
+}
 
-    .about-image img {
-      max-inline-size: 90%;
-      border-radius: 10px;
-    }
+.about-image img {
+    max-inline-size: 90%;
+    border-radius: 10px;
+}
 
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-block-start: 20px;
-    }
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-block-start: 20px;
+}
 
-    .socials a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      inline-size: 60px;
-      block-size: 60px;
-      background: var(--card-bg);
-      border-radius: 10px;
-      transition: transform 0.3s, background 0.3s;
-      border: 2px solid var(--accent-yellow); /* Yellow border */
-    }
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 60px;
+    block-size: 60px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    border: 2px solid var(--accent-yellow); /* Yellow border */
+}
 
-    .socials a svg {
-      inline-size: 44px;
-      block-size: 44px;
-      fill: #fff;
-    }
+.socials a svg {
+    inline-size: 44px;
+    block-size: 44px;
+    fill: #fff;
+}
 
-    .socials a:hover {
-      transform: scale(1.2);
-      border-radius: 15px;
-      border: none; /* Remove border on hover */
-    }
+.socials a:hover {
+    transform: scale(1.2);
+    border-radius: 15px;
+    border: none; /* Remove border on hover */
+}
 
-    .socials a.instagram:hover { background: #d62976; }
-    .socials a.LinkedIn:hover { background: #0072b1; }
-    .socials a.tiktok:hover { background: #00f2ea; }
-    .socials a.facebook:hover { background: #1877f2; }
-    .socials a.youtube:hover { background: #ff0000; }
-    .socials a.Google:hover { background: #0F9D58; }
+.socials a.instagram:hover { background: #d62976; }
+.socials a.LinkedIn:hover { background: #0072b1; }
+.socials a.tiktok:hover { background: #00f2ea; }
+.socials a.facebook:hover { background: #1877f2; }
+.socials a.youtube:hover { background: #ff0000; }
+.socials a.Google:hover { background: #0F9D58; }
 
 .CV-button {
     margin: 0 0 20px 150px;
 }
 
-    /* Site Footer */
+.Uddannelse {
+    margin-inline-start: 3.5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    align-items: center;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+}
+
+.div2 {
+    grid-row-start: 2;
+}
+
+.vl {
+    grid-row-start: 2;
+    block-size: 100%; /* Height */
+    border: 50; /* Remove default border */
+    border-inline-start: 3px solid var(--border); /* Left border */
+}
+
+.div4 {
+    grid-row-start: 2;
+}
+
+/* Site Footer */
 .site-footer {
+    margin-inline-start: -3.5%;
     background-color: var(--primary-blue); /* Blue background */
     color: var(--accent-yellow); /* Yellow text */
     padding: 24px 18px; /* Padding */

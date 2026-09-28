@@ -145,33 +145,70 @@ nav{
     margin: 0 0 20px 150px;
 }
 
-.Uddannelse {
+.Uddannelse-Milestones {  
     margin-inline-start: 3.5%;
+    items-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    align-items: center;
-}
-    
-.div1 {
-    grid-column: span 3 / span 3;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". v1 Milestones";
 }
 
-.div2 {
-    grid-row-start: 2;
+.uddannelse-grid,
+.Milestones {
+    grid-template-rows: auto;
 }
 
-.vl {
-    grid-row-start: 2;
+.uddannelse-grid p {
+    margin: 0 0 12px;
+}
+
+.uddannelse-grid {
+    items-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+}
+
+.udd-navne { 
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+.dato { 
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.sted { grid-area: 2 / 1 / 3 / 3; }
+
+.udd-text { grid-area: 3 / 1 / 4 / 3; }
+
+.Udd-dato { grid-area: 1 / 2 / 2 / 3; }
+
+.v1 { 
+    margin-inline-start: 3.5%;
+    grid-area: v1; 
     block-size: 100%; /* Height */
     border: 50; /* Remove default border */
     border-inline-start: 3px solid var(--border); /* Left border */
 }
 
-.div4 {
-    grid-row-start: 2;
+.Milestones {  display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Pro-name"
+    "pro-dato"
+    ".";
+    grid-area: Milestones;
 }
+
+.Pro-name { grid-area: Pro-name; }
+
+.pro-dato { grid-area: pro-dato; }
+
 
 /* Site Footer */
 .site-footer {

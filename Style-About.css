@@ -1,17 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 :root {
-    --bg-color: rgb(23, 23, 23);/* Bevar den sorte baggrund for det moderne look */
+    --bg-color: #171717;/* Bevar den sorte baggrund for det moderne look */
     --primary-blue: #252753;    /* Din nye brand-blå */
     --accent-yellow: #FCF202;   /* Din CTA-gul */
     --text-main: #ffffff;
     --text-dim: #a0a0a0;
-    --border: rgba(255, 255, 255, 0.163);
+    --border: #ffffff2a;
     --card-bg: #252753f9;
 }
 
 /* Global Box Sizing */
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -52,6 +52,7 @@ h2 {
 
 nav{
     position: fixed;
+    z-index: 100;
 }
 
 .Tilbage {
@@ -66,7 +67,7 @@ nav{
     transition: all 0.3s ease; /* Smooth transition */
 }
 
-.cta-secondary:hover {
+.Tilbage:hover {
     background: var(--accent-yellow); /* Yellow background on hover */
     color: var(--bg-color); /* Dark text on hover */
 }
@@ -146,73 +147,187 @@ nav{
 .socials a.youtube:hover { background: #ff0000; }
 .socials a.Google:hover { background: #0F9D58; }
 
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-inline-size: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    inline-size: 6px;
+    background-color: #ffffff2a;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 50%;
+    margin-inline-start: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    inline-size: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    inline-size: 25px;
+    block-size: 25px;
+    inset-inline-end: -17px;
+    background-color: #FCF202;
+    border: 4px solid #FCF202;
+    inset-block-start: 15px;
+    border-radius: 50%;
+}
+
+/* Place the container to the left */
+.left {
+    inset-inline-start: 0;
+}
+
+/* Place the container to the right */
+.right {
+    inset-inline-start: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.inset-inline-start::before {
+    content: " ";
+    block-size: 0;
+    position: absolute;
+    inset-block-start: 22px;
+    inline-size: 0;
+    z-index: 1;
+    inset-inline-end: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #252753;
+}
+
+/* Add arrows to the right container (pointing left) */
+.inset-inline-end::before {
+    content: " ";
+    block-size: 0;
+    position: absolute;
+    inset-block-start: 22px;
+    inline-size: 0;
+    z-index: 1;
+    inset-inline-start: 31px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #252753 transparent transparent;
+}
+
+/* Center the right-side circle on the timeline */
+.inset-inline-end::after {
+    inset-inline-start: -17px;
+    inset-inline-end: auto;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: #252753;
+    position: relative;
+    border-radius: 6px;
+}
+
+.content h2, .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+/* Fade & slide transition styling */
+.mybox1 {
+    max-block-size: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.mybox1.expanded {
+    max-block-size: 3000px; /* Set high enough to fit all hidden items */
+    opacity: 1;
+}
+
+/* Centered container for toggle button */
+button {
+    text-align: center;
+    margin-block-start: 30px;
+}
+
+button {
+    position: relative;
+    background: transparent;
+    border: 2px solid var(--accent-yellow);
+    color: var(--accent-yellow);
+    padding: 16px 35px;
+    border-radius: 5px;
+    font-weight: 900;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 50px;
+}
+
+button:hover{
+    box-shadow: 0 10px 20px rgba(252, 242, 2, 0.2); /* Subtilt gult skær ved hover */
+    border: none;
+    background-color: var(--accent-yellow);
+    color: var(--primary-blue); /* Skift tekstfarve til blå ved hover for kontrast */
+    cursor: pointer;
+}
+
+.read-more-button{
+    text-align: center;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+        .timeline::after {
+        inset-inline-start: 31px;
+    }
+
+    .container {
+        inline-size: 100%;
+        padding-inline-start: 70px;
+        padding-inline-end: 25px;
+    }
+
+    .inset-inline-start::before, .inset-inline-end::before {
+        inset-inline-start: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #252753 transparent transparent;
+    }
+
+    .inset-inline-start::after, .inset-inline-end::after {
+        inset-inline-start: 18.5px;
+        inset-inline-end: auto;
+    }
+
+    .right {
+    inset-inline-start: 0%;
+    }
+}
+
 .CV-button {
     margin: 0 0 20px 150px;
 }
 
-.Uddannelse-Milestones {
-    inline-size: min(100% - 2rem, 1100px);
-    margin-inline: auto;
-    align-items: center;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 3px minmax(0, 1fr);
-    column-gap: 2rem;
-    grid-template-areas: "education divider milestones";
+.CV-button a{
+    color: var(--accent-yellow);
 }
 
-.uddannelse-grid,
-.Milestones {
-    grid-template-rows: auto;
+.CV-button:hover a{
+    color: #000;
 }
-
-.uddannelse-grid p {
-    margin: 0 0 12px;
-}
-
-.uddannelse-grid {
-    align-items: center;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-flow: row;
-    row-gap: 1.5rem;
-    grid-area: education;
-    min-inline-size: 0;
-}
-
-.udd-entry {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 1rem;
-}
-
-.udd-entry > .sted, .udd-entry > .udd-text, .udd-entry > hr {
-    grid-column: 1 / -1;
-}
-
-.v1 { 
-    grid-area: divider;
-    block-size: 100%; /* Height */
-    border: 0;
-    border-inline-start: 3px solid var(--border); /* Left border */
-}
-
-.Milestones {
-    display: grid; 
-    grid-template-columns: 1fr;
-    row-gap: 1.5rem;
-    grid-area: milestones;
-    min-inline-size: 0;
-}
-
-.milestone-entry {
-    display: grid;
-    row-gap: 0.55rem;
-}
-
-.Milestones p {
-    margin: 0;
-}
-
 
 /* Site Footer */
 .site-footer {

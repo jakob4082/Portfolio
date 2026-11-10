@@ -102,11 +102,13 @@ nav{
 .about-image {
     flex: 1;
     text-align: center;
+    
 }
 
 .about-image img {
     max-inline-size: 90%;
     border-radius: 10px;
+    transform: none;
 }
 
 .socials {
@@ -147,6 +149,28 @@ nav{
 .socials a.youtube:hover { background: #ff0000; }
 .socials a.Google:hover { background: #0F9D58; }
 
+.slider img {
+  inline-size: 70px;
+  block-size: 70px;
+  animation: scroll 60s linear infinite;
+}
+
+.slide-track {
+    inline-size: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+}
+
+.slider {
+    padding: 10px 40px;
+}
+
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
@@ -176,7 +200,7 @@ nav{
 /* The circles on the timeline */
 .container::after {
     content: '';
-    position: absolute;
+    position:absolute;
     inline-size: 25px;
     block-size: 25px;
     inset-inline-end: -17px;

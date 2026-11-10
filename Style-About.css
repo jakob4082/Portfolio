@@ -149,26 +149,33 @@ nav{
 .socials a.youtube:hover { background: #ff0000; }
 .socials a.Google:hover { background: #0F9D58; }
 
-.slider img {
-  inline-size: 70px;
-  block-size: 70px;
-  animation: scroll 60s linear infinite;
-}
-
-.slide-track {
-    inline-size: 100%;
-    display: flex;
-    gap: 3em;
+.logo-slider {
     overflow: hidden;
+    white-space: nowrap;
+    inline-size: 100%;
+    padding: 3rem 0;
 }
 
-.slider {
-    padding: 10px 40px;
+.logo-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+}
+
+.logo-track img {
+    block-size: 85px;
+    margin: 0 3rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.logo-track img:hover {
+    transform: scale(1.2);
 }
 
 @keyframes scroll {
     0% {transform: translateX(0);}
-    100% {transform: translatex(-1000%)}
+    100% {    transform: translateX(-50%);}
 }
 
 /* The actual timeline (the vertical ruler) */

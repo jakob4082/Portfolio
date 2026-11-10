@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     <div style="block-size: 60px;"></div>
     <!-- ----menu+burger---- -->
     <div class="header">
@@ -77,63 +76,15 @@
     <h2>Min Arbejdsproces</h2>
     <!---------- Kompetencer & Værktøjskasse (Skills Stack) ---------->
     <h2>Kompetencer & Værktøjskasse</h2>
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+        <div class="logo-slider">
+            <div class="logo-track">
+                <img src="https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb-768x768.png" alt="">
+                <img src="https://ph-files.imgix.net/e171e26a-cecc-4dfb-8de8-eec3a2b73c60.jpeg?auto=format" alt="" style="border-radius: 10px;">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/960px-Calligrakrita-base.svg.png" alt="">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-svg-vector.svg" alt="">
+                <img src="https://brandlogos.net/wp-content/uploads/2022/12/davinci_resolve-logo_brandlogos.net_pbpaj.png" alt="">
+                <img src="https://code.visualstudio.com/assets/branding/code-stable.png" alt="">
             </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
-            </div>
-            <div class="slide">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
-            </div>
-        </div>
         </div>
     <!---------- Uddannelse & Milestones / Awards ---------->
     <h2 style="block-size: 60px; ">Uddannelse & Milestones</h2>
@@ -233,6 +184,31 @@
             mybutton.textContent = 'Read More';
         }
         }
+
+        // Get the slider container
+      const slider = document.querySelector(".logo-slider");
+
+      // Get the logo track and all logo images inside
+      const track = document.querySelector(".logo-track");
+      const logos = Array.from(track.children);
+
+      // Clone all logos and append them to the end to create an infinite loop
+      logos.forEach((logo) => {
+        const clone = logo.cloneNode(true);
+        track.appendChild(clone);
+      });
+
+      // Pause animation on hover
+      slider.addEventListener("mouseover", function () {
+        document.querySelector(".logo-track").style.animationPlayState =
+          "paused";
+      });
+
+      // Resume animation when hover ends
+      slider.addEventListener("mouseout", function () {
+        document.querySelector(".logo-track").style.animationPlayState =
+          "running";
+      });
     </script>
 </body>
 </html>

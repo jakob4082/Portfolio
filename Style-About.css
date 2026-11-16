@@ -207,10 +207,10 @@ nav{
 /* The circles on the timeline */
 .container::after {
     content: '';
-    position:absolute;
+    position: absolute;
     inline-size: 25px;
     block-size: 25px;
-    inset-inline-end: -17px;
+    inset-inline-end: -16px;
     background-color: #FCF202;
     border: 4px solid #FCF202;
     inset-block-start: 15px;
@@ -228,21 +228,21 @@ nav{
 }
 
 /* Add arrows to the left container (pointing right) */
-.inset-inline-start::before {
+.left::before {
     content: " ";
     block-size: 0;
     position: absolute;
     inset-block-start: 22px;
     inline-size: 0;
     z-index: 1;
-    inset-inline-end: 30px;
+    inset-inline-end: 31px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #252753;
 }
 
 /* Add arrows to the right container (pointing left) */
-.inset-inline-end::before {
+.right::before {
     content: " ";
     block-size: 0;
     position: absolute;
@@ -256,8 +256,8 @@ nav{
 }
 
 /* Center the right-side circle on the timeline */
-.inset-inline-end::after {
-    inset-inline-start: -17px;
+.right::after {
+    inset-inline-start: -16px;
     inset-inline-end: auto;
 }
 
@@ -331,15 +331,15 @@ button:hover{
         padding-inline-end: 25px;
     }
 
-    .inset-inline-start::before, .inset-inline-end::before {
+    .left::before, .right::before {
         inset-inline-start: 60px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent #252753 transparent transparent;
     }
 
-    .inset-inline-start::after, .inset-inline-end::after {
-        inset-inline-start: 18.5px;
+    .left::after, .right::after {
+        inset-inline-start: 18px;
         inset-inline-end: auto;
     }
 
